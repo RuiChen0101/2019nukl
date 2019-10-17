@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>2019北區大專跑跑卡丁車聯賽</title>
+    <link rel="shortcut icon" href="img/icon/favicon.png">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href='css/general.css'>
+    <link rel="stylesheet" href='css/index.css'>
+    <link rel="stylesheet" href='css/all.css'>
+</head>
+
+<body>
+    <!--/.header-->
+    <nav id="header" class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="index.html"><img src="img/icon/yolo_logo.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="left"></div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="rule.html">賽事規章</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="enroll_list.html">報名名單</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="404.html">賽程表</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="price.html">賽事獎項</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="404.html">決賽資訊</a>
+                </li>
+                <li class="nav-item">
+                     <a class="nav-link" href="contact_us.html">聯絡我們</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--/.header end-->
+
+    <!--/.banner-->
+    <section id="banner" class="container-fulid">
+        <div class="row">
+            <div class="col  banner_right">
+                <div class="row banner_logo">
+                    <div class="col">
+                        <img src="img/index/banner-logo_day.png">
+                    </div>
+                </div>
+                <div class="row banner_enroll">
+                    <div class="col">
+                        <a href="enroll_rule.html"><img class="enroll-btn" src="img/index/banner-enroll_btn.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/.banner end-->
+    <!--/.section1-->
+    <section id="about" class="container-fulid bg-0e">
+        <div class="row">
+            <div class="col-12 about-title title">
+                <h1><img class="title_line" src="img/index/titleline_red.png">關於北區跑跑競賽<img class="title_line" src="img/index/titleline_blue.png"></h1>
+            </div>
+            <div class="col-12 video">
+              <div id="yt-player"></div>
+              <div id="gif-player">
+                <img src="https://imgur.com/RhC0qhH.gif">
+              </div>
+            </div>
+            <div class="col-12 paragraph">
+                   <p>　　2019跑跑北區聯賽專屬於北部大專學院學生量身打造的跑跑卡丁車比賽，除了平常最容易看到的競速以外，也增加個人道具，增加趣味性，讓不管是選手還是觀眾都能一同加入的盛會。</p>
+            </div>
+        </div>
+    </section>
+    <!--/.section1 end-->
+
+    <!--/.section2-->
+    <section id="qualify" class="container-fulid">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <img class="character" src="img/index/section2-character.png">
+            </div>
+            <div class="col-lg-6 col-md-12 enroll_info">
+                <h1><img class="title_line" src="img/index/titleline_red.png">比賽報名資格<img class="title_line" src="img/index/titleline_blue.png"></h1>
+                <p>　　具有位於新竹、桃園、新北、台北、基隆與宜蘭之大專院校學生證之學生。（學生證背面需印有 108 學年度第一學期註冊章或學校發放之免註冊章貼紙）</p>
+                <button type="button" class="btn btn-outline-light" onclick="location.href='qualify.html'">查看符合資格之院校清單</button>
+            </div>
+        </div>
+    </section>
+    <!--/.section2 end-->
+
+    <!--/.section3-->
+    <section id="content" class="container-fulid bg-0e">
+        <div class="col-12 content-title">
+            <h1><img class="title_line" src="img/index/titleline_red.png">比賽項目<img class="title_line" src="img/index/titleline_blue.png"></h1>
+        </div>
+        <div class="line"><img class="redline" src="img/index/section3-line.png"></div>
+        <div class="col-12 align-self-center btn-group need-center">
+            <button id="defaultOpen" type="button" class="btn btn-primary tablinks" onclick="openIndexTab(event, 's3-intro-1')">個人競速賽</button>
+            <button type="button" class="btn btn-primary tablinks" onclick="openIndexTab(event, 's3-intro-2')">個人道具賽</button>
+            <button type="button" class="btn btn-primary tablinks" onclick="openIndexTab(event, 's3-intro-3')">團體競速賽</button>
+        </div>
+        <div class="line"><img class="redline" src="img/index/section3-line.png"></div>
+
+        <!--/.intro-1-->
+        <div class="row tabcontent" id="s3-intro-1">
+            <div class="col-lg-6">
+                <img class="intro_photo" src="img/index/section3-picture01.png">
+            </div>
+            <div class="col-lg-6 col-md-12 intro">
+                <div class="need-center"><h3>個人競速賽</h3></div>
+                <p>　　沒有隊友的情況下，考驗選手的穩定性，對地圖掌握度越高，獲得勝利的機率就越高。</p>
+                <div class="need-center">
+                    <img class="intro_time" src="img/index/section3-time01.png">
+                    <div class="row enroll-btn">
+                      <div class="col">
+                        <a class="btn btn-outline-light" href='rule.html'>賽事規章</a>
+                      </div>
+                      <div class="col">
+                        <a class="btn btn-light" href='enroll_rule.html'>立即報名</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--/.intro-2-->
+        <div class="row tabcontent" id="s3-intro-2">
+            <div class="col-lg-6">
+                <img class="intro_photo" src="img/index/section3-picture02.png">
+            </div>
+            <div class="col-lg-6 col-md-12 intro">
+                <div class="need-center"><h3>個人道具賽</h3></div>
+                <p>　　除了道具的運氣以外，也需要想好如何運用手上的道具拿取勝利，讓比賽增加更多未知數。</p>
+                <div class="need-center">
+                    <img class="intro_time" src="img/index/section3-time01.png">
+                    <div class="row enroll-btn">
+                      <div class="col">
+                        <a class="btn btn-outline-light" href='rule.html'>賽事規章</a>
+                      </div>
+                      <div class="col">
+                        <a class="btn btn-light" href='enroll_rule.html'>立即報名</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--/.intro-3-->
+        <div class="row tabcontent" id="s3-intro-3">
+            <div class="col-lg-6">
+                <img class="intro_photo" src="img/index/section3-picture03.png">
+            </div>
+            <div class="col-lg-6 col-md-12 intro">
+                <div class="need-center"><h3>團體競速賽</h3></div>
+                <p>　　團隊配合莫過於一枝獨秀，除了個人能力，隊友間的溝通、配合更為重要，要一起往冠軍邁進。</p>
+                <div class="need-center">
+                    <img class="intro_time" src="img/index/section3-time02.png">
+                    <div class="row enroll-btn">
+                      <div class="col">
+                        <a class="btn btn-outline-light" href='rule.html'>賽事規章</a>
+                      </div>
+                      <div class="col">
+                        <a class="btn btn-light" href='enroll_rule.html'>立即報名</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--/.section3 end-->
+
+    <!--/.section4-->
+    <section id="about-us" class="container-fulid bg-0e">
+        <div class="row about-us align-items-center">
+            <div class="col-12 title">
+                <h1><img class="title_line" src="img/index/titleline_red.png">關於主辦單位<img class="title_line" src="img/index/titleline_blue.png"></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 col-md-6 logo need-center">
+                <img src="img/index/section4-logo.png">
+                <p><br>國立臺北科技大學 電子競技社</p>
+            </div>
+            <div class="col-lg-7 col-md-6 intro">
+                <div class="row">
+                    <div class="col">
+                      <h3>「學生電競並非玩樂，而是一種產業態度。」</h3>
+                          <p><br>
+                          　　北科電競社由2015年成立觀察性社團，於2017年成為正式社團，定期舉辦校內電競比賽、電競相關社課，也會和校外舉辦大型電競比賽，打造一個讓喜歡遊戲的玩家、對電競有熱情的玩家、甚至是沒碰過遊戲的觀眾都可以一同加入、 一同熱血的舞台。<br></p>
+
+                    </div>
+                </div>
+                <div class="row">
+                     <div class="social-link">
+                         <div class="col">
+                             <a href="https://www.facebook.com/TaipeiTechESports/" target="_blank" rel="noopener noreferrer">
+                               <i class="fab fa-facebook-square"></i>
+                             </a>
+                             <a href="https://www.twitch.tv/taipeitech_esports_club" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-twitch"></i>
+                             </a>
+                             <a href="https://www.youtube.com/channel/UCj_4GktFFQmdiyyMrjXTjbg" target="_blank" rel="noopener noreferrer">
+                               <i class="fab fa-youtube"></i>
+                             </a>
+                             <a href="https://discord.gg/4KGq8Qh" target="_blank" rel="noopener noreferrer">
+                               <i class="fab fa-discord"></i>
+                             </a>
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/.section4 end-->
+
+    <!--/.footer-->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                  <div class="footer-top-item">
+                    <p>主辦單位</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="footer-top-item">
+                    <img src="img/icon/ttes_logo.png">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="footer-top-item">
+                    <p>贊助單位</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="footer-top-item">
+                    <img src="img/icon/gtw_logo.png">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="footer-top-item">
+                    <img src="img/icon/tt_logo.png">
+                  </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 footer-bottom">
+                    <hr>
+                    <p>© 2019 國立臺北科技大學電子競技社 TaipeiTech e-Sports Club. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/.footer end-->
+    <script src="js/tabview.js"></script>
+    <script src="js/youtubeplay.js"></script>
+    <script>
+        fetch("https://us-central1-ttes-2019nukl.cloudfunctions.net/hitCounter",{mode: 'no-cors'});
+    </script>
+</body>
+</HTML>

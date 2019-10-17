@@ -1,0 +1,31 @@
+#qualify{
+  width: 100%;
+  margin: 80px 0px;
+}
+
+#qualify .qualify-area{
+  background: url(../img/otherpage/dirty_old_shirt.png);
+  background-size: auto;
+  width: 100%;
+  text-align: center;
+  border:  3px solid #960E0E;
+}
+
+#qualify .qualify-area .qualify-area-content{
+  margin: 20px 0px;
+}
+
+#qualify .qualify-area ul{
+  padding: 0px;
+}
+
+#qualify .qualify-area li{
+  color: #fcfcfc;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 413px){
+  #qualify {
+    margin: 30px 0;
+  }
+}

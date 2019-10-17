@@ -1,0 +1,308 @@
+/*INDEX PAGE*/
+
+/* BANNER SECTION */
+#banner{
+    width: 100%;
+    padding: 0px 15%;
+    height: 650px;
+    background:url(../img/index/banner-bg.png);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+#banner .banner_right{
+    width: 100%;
+    padding-top: 150px;
+    padding-right: 60%;
+}
+
+#banner .banner_logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* ABOUT SECTION */
+#about{
+    width:100%;
+}
+
+#about .about-title {
+    margin-top: 50px;
+    padding-left: 16%;
+    padding-right: 16%;
+    height: 100px;
+    color: white;
+    background: url(../img/index/section1-title_background.png);
+    background-size: cover;
+}
+
+#about .video {
+    text-align: center;
+    background: url(../img/index/section1-background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#about .video .iframe{
+    height: auto;
+    width: 100%;
+}
+
+#gif-player{
+    height: auto;
+    width: 100%;
+    padding: auto 20px;
+    align-items: center;
+    justify-content:  center;
+    display: none;
+}
+
+#gif-player img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#about .paragraph {
+    height: 150px;
+    padding: 0px 15%;
+    margin: 10px 0px;
+}
+
+/* QUALIFY SECTION */
+#qualify {
+    width: 100%;
+    padding: 60px 11%;
+    background: url(../img/index/section1-pra_background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#qualify .character {
+    float: right;
+    width: 100%;
+}
+
+#qualify .enroll_info {
+    text-align: center;
+}
+
+/* CONTENT SECTION */
+#content{
+    width: 100%;
+    padding-left:16%;
+    padding-right:16%;
+    padding-bottom:40px;
+    background: url(../img/index/section3-background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#content .content-title {
+    padding-top: 30px;
+    height: 80px;
+    color: white;
+    text-align: center;
+}
+
+#content .s3-btn-group {
+    text-align: center;
+    padding: 15px 0px;
+}
+
+#content .intro{
+    padding: 15px;
+}
+
+#content .redline{
+    height: 1px;
+    width: 100%;
+}
+
+#content .tabcontent .enroll-btn{
+    margin: 10px 0px;
+}
+
+#content .tabcontent .enroll-btn .btn{
+    width: 100%;
+    margin: 6px;
+}
+
+.intro_photo, .intro_time{
+    width: 100%;
+}
+
+/* ABOUT-US SECTION */
+#about-us {
+    background: url(../img/index/section4-background.png);
+    background-size: cover;
+    background-position: bottom;
+    padding:0px 16%;
+}
+
+#about-us .about-us{
+    padding: 3% 0px;
+}
+
+#about-us .logo{
+    padding: 30px;
+}
+
+#about-us .intro{
+    padding: 30px 0px;
+}
+
+#about-us .social-link{
+    width: 100%;
+    text-align: center;
+}
+
+#about-us .social-link a{
+    margin: 0px -15px;
+    font-size: 30px;
+}
+
+#about-us .social-link a:hover{
+    text-decoration: none;
+}
+
+.btn-primary{
+    margin: 0px 6%;
+    background-color: #0e0e0e;
+    border-color:#0e0e0e;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: brown;
+    border-color: brown;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: brown;
+    border-color: brown;
+}
+
+@media screen and (max-width: 1024px){
+    #banner{
+        padding: 0px 3%;
+        height: 650px;
+    }
+
+    #banner .banner_right {
+    padding-top: 100px;
+    padding-right: 45%;
+    text-align: center;
+    }
+
+    #about-us .social-link a{
+      margin: 0px -20px;
+      font-size: 25px;
+    }
+
+    .title_line{
+       width: 15%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #banner{
+        height: 500px;
+    }
+
+    #banner .banner_right {
+        padding: 80px 0px;
+        width: 600px;
+    }
+
+    #banner .banner_logo img {
+        width: 60%;
+    }
+
+    #banner .banner_enroll img {
+        width: 20%;
+    }
+
+    #about .title{
+      height: 50px;
+    }
+
+    #about .paragraph {
+        margin: 10px 0px 40px 0px;
+    }
+
+    #content .intro_photo{display: none;}
+
+    #about-us {
+        padding:0px 10%;
+    }
+
+    #about-us .social-link a{
+      margin: 0px -20px;
+      font-size: 30px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h3{
+        font-size: 20px;
+    }
+
+    .title_line{
+       width: 12%;
+    }
+
+    .title{
+        text-align: center;
+    }
+
+    #yt-player{
+        display: none;
+    }
+
+    #gif-player{
+        height: 300px;
+        width: 100%;
+        display: flex;
+    }
+
+    #qualify, #content {
+        padding: 3%;
+    }
+}
+
+@media screen and (max-width: 413px){
+    #banner .banner_logo img {
+        width: 100%;
+    }
+
+    #banner .banner_enroll img {
+        width: 50%;
+    }
+
+    #about .title h1{
+      font-size: 22px;
+    }
+
+    #about-us {
+        padding:0px 5%;
+    }
+
+    #about-us .social-link a{
+      margin: 0px -20px;
+      font-size: 25px;
+    }
+
+    #gif-player{
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 350px){
+  #about .title h1{
+    font-size: 20px;
+  }
+}

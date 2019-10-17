@@ -1,0 +1,151 @@
+.container-fulid {
+    margin-bottom: 0px;
+}
+
+.row{
+    margin: 0px;
+}
+
+.left{
+    margin-right: auto;
+}
+
+#header{
+    background-color: #fcfcfc;
+    border-bottom:  5px solid #960E0E;
+}
+
+#header .navbar-nav .active{
+    color: #960E0E;
+    border-bottom:  2px solid #960E0E;
+}
+
+#header .navbar-brand img{
+    margin-left: 10px;
+    height: 40px;
+}
+
+.navbar {
+    text-align: end;
+}
+
+/*FOOTER SECTION*/
+#footer{
+    width: 100%;
+    background: #000;
+    padding: 10px;
+}
+
+#footer p{
+    margin: 5px 0px;
+    color: white;
+    font-size: 8px;
+    font-family:Microsoft JhengHei;
+}
+
+#footer img{
+    height: 50px;
+    margin-right: 25px;
+}
+
+#footer hr{
+    border-top: 0.3px solid #ffffff;
+}
+
+#footer .footer-top-item{
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+#footer .footer-top-item p{
+    font-size: 16px;
+}
+
+#footer .footer-bottom{
+    text-align: center;
+}
+
+#divider{
+  display: inline;
+  float: left;
+  height: 5px;
+  width: 100%;
+  margin: 20px 0px;
+  background-color: #960E0E;
+}
+
+/*COMMON WORD*/
+h1,h2,h3,h4,p,ul,li,a,button,span{
+  font-family:Microsoft JhengHei;
+  color: #fcfcfc;
+}
+
+ul{
+    list-style: none;
+    color: #5c96c9;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+.btn:hover{
+    color: #fcfcfc;
+    background-color: #5c96c9;
+}
+
+a{
+    color: #5c96c9;
+}
+
+p{
+    font-size: 18px;
+}
+
+/*bg*/
+
+.bg-0e {
+    background: #0e0e0e;
+}
+
+.need-center {
+    text-align: center;
+}
+
+.fab {
+    margin: 0px 30px;
+    height: 100%;
+}
+
+@media screen and (max-width: 768px){
+    #footer .footer-top-item p{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    #footer{
+        padding:10px 0px;
+    }
+
+    #footer .container{
+        padding:10px 0px;
+    }
+
+    #footer .container .col{
+        padding:0px;
+    }
+
+    #footer .footer-top-item{
+        width: 100vw;
+    }
+
+    #footer .footer-top-item img{
+        margin: 10px 0px;
+    }
+
+    #footer .footer-top-item p{
+        font-size: 16px;
+    }
+}

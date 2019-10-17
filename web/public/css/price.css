@@ -1,0 +1,133 @@
+#price{
+  width: 100%;
+  margin: 80px 0px;
+  display: flex;
+  align-items: center;
+  justify-content:  center;
+}
+
+#price .price-area{
+  width: 100%;
+  padding: 40px 80px;
+  background: url(../img/otherpage/dirty_old_shirt.png);
+  background-size: auto;
+  border:  3px solid #960E0E;
+}
+
+#price .price-tab-bar{
+    text-align: center;
+}
+
+#price .price-tab-bar p{
+    font-size: 24px;
+    padding-top: 8px;
+}
+
+#price .price-tabcontent {
+    margin: 50px 0px;
+}
+
+#price .price-tabcontent .signal-price{
+    margin: 50px 0px;
+}
+
+#price .price-tabcontent .signal-price .signal-price-left {
+    margin: 20px 0px;
+}
+
+#price .price-tabcontent .price-tabcontent-title {
+    margin: 25px 0px;
+}
+
+#price .price-tabcontent img{
+    width: 100%;
+    height: auto;
+    border: 5px solid #960E0E;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.btn-primary{
+    color: #fff;
+    background-color: transparent;
+    border-color:transparent;
+    font-weight: 1000;
+    font-size: 24px;
+    font-family:Microsoft JhengHei;
+}
+
+.btn-primary:hover {
+    color: #FC4850;
+    background-color: transparent;
+    border-color:transparent;
+    font-weight: 1000;
+    font-size: 24px;
+    font-family:Microsoft JhengHei;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #FC4850;
+    background-color: transparent;
+    border-color:transparent;
+    font-weight: 1000;
+    font-size: 24px;
+    font-family:Microsoft JhengHei;
+}
+
+@media screen and (max-width: 1024px){
+  #price .price-area{
+    padding: 40px 40px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  #price{
+    margin: 20px 0px;
+  }
+
+  #price .price-area{
+    padding: 20px 10px;
+  }
+
+  #price .price-tabcontent .price-tabcontent-title h2{
+      font-size: 26px;
+  }
+
+  #price .price-tabcontent .signal-price .col{
+      padding:0px 3px;
+  }
+
+  .btn-primary, .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
+      font-size: 16px;
+  }
+
+  .sm-hidden {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .btn-primary, .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
+      font-size: 13px;
+  }
+
+  #price .price-tabcontent {
+      margin: 20px 0px;
+  }
+
+  #price .price-tabcontent .signal-price h3{
+      font-size: 20px;
+  }
+
+  #price .price-tabcontent .signal-price p{
+      font-size: 12px;
+      margin: 0px 0px 4px 0px;
+  }
+
+  #price .price-tabcontent .signal-price .signal-price-left {
+      margin: 3px 0px;
+  }
+}

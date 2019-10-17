@@ -1,0 +1,433 @@
+<HTML>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>2019北區大專跑跑卡丁車聯賽</title>
+    <link rel="shortcut icon" href="img/icon/favicon.png">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href='css/general.css'>
+    <link rel="stylesheet" href='css/rule.css'>
+</head>
+
+<body class="bg-0e">
+    <!--/.header-->
+    <nav id="header" class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="index.html"><img src="img/icon/yolo_logo.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="left"></div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="rule.html">賽事規章</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="enroll_list.html">報名名單</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="404.html">賽程表</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="price.html">賽事獎項</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="404.html">決賽資訊</a>
+                </li>
+                <li class="nav-item">
+                     <a class="nav-link" href="contact_us.html">聯絡我們</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--/.header end-->
+
+    <!--/.banner-->
+    <section id="banner"></section>
+    <!--/.banner end-->
+
+    <section id="rule">
+        <div class="container rule">
+            <div class="row justify-content-center align-items-center rule-tab-bar">
+                 <div class="col-sm-2 col-5">
+                   <button id="defaultOpen" class="btn btn-primary tablinks" onclick="openTab(event, 'common')">通用規章</button>
+                 </div>
+                <p>|</p>
+                 <div class="col-sm-2 col-5">
+                   <button class="btn btn-primary tablinks" onclick="openTab(event, 'signalRacing')">個人競速</button>
+                 </div>
+                <p class="sm-hidden">|</p>
+                 <div class="col-sm-2 col-5">
+                   <button class="btn btn-primary tablinks" onclick="openTab(event, 'signalItem')">個人道具</button>
+                 </div>
+                <p>|</p>
+                 <div class="col-sm-2 col-5">
+                   <button class="btn btn-primary tablinks" onclick="openTab(event, 'groupRacing')">團體競速</button>
+                 </div>
+            </div>
+            <div class="rule-content">
+               <!-- Start common rule -->
+               <div id="common" class="rule-tabcontent tabcontent">
+                 <h2>通用規章</h2>
+                 <ul>
+                   <li>
+                     <ul class="single-rule">一、參賽資格:
+                       <li>1. 屬於新竹、桃園、新北、台北、基隆、宜蘭之大專院校之學生。</li>
+                       <li>2. 報名繳交的學生證需有108年第一學期註冊章或學校核發之免註冊章貼紙。</li>
+                       <li>3. 每人一個項目只能參加一支隊伍，若經主辦發現重複參賽之情形，該名選手參加之所有隊伍將被判定失格。</li>
+                       <li>4. 每位選手各自擁有信用良好的有效 跑跑卡丁車 帳號。</li>
+                     </ul>
+                   </li>
+                   <li>
+                     <ul class="single-rule">二、報名規則:
+                       <li>1. 報名時間 : 2019/10/14~2019/11/01</li>
+                       <li>2. 報名費用 : 免費</li>
+                       <li>3. 報名上限 : 個人賽上限128名選手，團體賽上限64支隊伍，依報名順序為準</li>
+                     </ul>
+                   </li>
+                   <li>
+                     <ul class="single-rule">三、比賽時間:
+                       <li>1. 線上初賽 :
+                         <ul>
+                           <li>A. 比賽時間 : 2019/11/11~2019/12/12</li>
+                           <li>B. 比賽項目 : 個人道具賽、個人競速賽、團體競速賽</li>
+                         </ul>
+                       </li>
+                       <li>2. 線下決賽:
+                         <ul>
+                           <li>A. 比賽時間 : 2019/12/14</li>
+                           <li>B. 比賽項目 : 個人道具賽決賽(8強)、個人競速賽決賽(8強)、團體競速賽季殿、團體競速賽冠亞</li>
+                           <li>C. 比賽地點 : 國立臺北科技大學 中正館 中正廳</li>
+                         </ul>
+                       </li>
+                     </ul>
+                   </li>
+                   <li>
+                     <ul class="single-rule">四、通用比賽規則:
+                       <li>1. 比賽勝利判定標準 :
+                         <ul>
+                           <li>(一)線上約戰請雙方隊伍於約定好的時間前 10 分鐘登錄遊戲，若因遇改版或更新無法準時進入遊戲者，視同遲到處理，主辦方有權判遲到隊伍棄權。</li>
+                           <li>(二)比賽結束後，勝方有責任將整個勝利的結算畫面(含雙方選手名稱與勝利文字)進行截圖，並提供給主辦方審核。</li>
+                           <li>(三)線下賽雙方選手需於主辦方公告之報到時間至比賽現場檢錄及測試電腦如隊伍遲到 10 分鐘，主辦方有權判遲到隊伍棄權。</li>
+                         </ul>
+                       </li>
+                       <li>2. 觀戰模式請設定為未公開，並只能有主辦方人員在場，否則主辦方有權無視比賽結果。</li>
+                     </ul>
+                   </li>
+                   <li>
+                     <ul class="single-rule">五、斷線判定:
+                       <li>1. 如果比賽開始10秒後因個人因素導致某位選手離開遊戲，比賽則依現有人數繼續進行，斷線者可於下場比賽前加回房間。(個人因素定義為網路斷線、電腦當機等)</li>
+                       <li>2. 如遇非個人因素造成比賽中斷者，經主辦方認定後可重賽，且斷線前之比賽結果保留繼續。(非個人因素定義為遊戲商伺服器大斷線、天災等)</li>
+                       <li>3.	如在第一張地圖(城鎮運河不算)10秒內雙方選手有一人產生斷線狀況，則主辦方有權決定比賽是否重新開始。</li>
+                     </ul>
+                   </li>
+                   <li>
+                     <ul class="single-rule">五、不正當比賽行為:
+                       <li>1. 符合不正當比賽行為之隊伍判定失去比賽資格。</li>
+                       <li>2. 使用任何外掛程式(如開啟全地圖)故意製造斷線，或使用不符合比賽規則的遊戲設定或 Bug。</li>
+                       <li>3. 比賽進行中不允許任何違反運動家精神的行為，如發送挑釁用語、由主辦方認定任何不正當的訊息、明顯地讓對手贏得比賽等。</li>
+                       <li>4. 符合不正當比賽行為之隊伍判定失去比賽資格。</li>
+                     </ul>
+                   </li>
+                   <li>
+                     <ul class="single-rule">六、注意事項:
+                       <li>1. 完成報名的玩家即同意國立臺北科技大學電子競技社所訂定之本賽事規章。</li>
+                       <li>2. 國立臺北科技大學電子競技社擁有使用活動相片、玩家錄影、你的姓名、個人經歷與樣貌替本賽事進行廣告行為，並且作為賽事往後的歷史推廣。依照本賽事規則，主辦單位有權獨自或與播放合作夥伴播放或重播賽事內容(包括透過網際網絡與無線網路)，無須支付額外費用作為出版。</li>
+                       <li>3. 不得更換帳號或使用他人帳號參與比賽。</li>
+                       <li>3. 參賽選手有責任維持自己的連線品質，嚴重影響比賽者裁判有權判離場。</li>
+                       <li>4. 參賽資格不符之選手，經檢舉並證明屬實，主辦單位得判定該選手失去比賽資格。</li>
+                       <li>5. 參賽者遊戲名稱不能含有任何不雅及粗俗字句。</li>
+                       <li>6. 得獎者及其隊員領取獎金 / 獎品前須出示其身份證明文件以核實身份。</li>
+                       <li>7. 若對比賽有任何疑慮，請於比賽當下向主辦方提出，比賽結束恕不受理，也不接受任何重賽請求。</li>
+                       <li>8. 若調查發現遊戲中選手資料與報名資料不符，該隊伍失去比賽資格。</li>
+                       <li>9. 活動期間有違規行為的參賽者依違規程度輕重，主辦方(國立臺北科技大學電子競技社)可在未來的活動將其列為拒絕往來戶，並在此賽事中判該隊伍失去比賽資格。</li>
+                       <li>10. 在任何情況下造成比賽延誤或取消，主辦方均不會作出任何退款或賠償。</li>
+                       <li>11. 活動期間系統若發生任何問題，或其他不可抗力之因素，導致活動無法順利進行，國立臺北科技大學電子競技社保留變更或終止活動時間、內容以及規則之權利。</li>
+                       <li>12.其他未規定事項，將統一由主辦方於活動網頁<a href="https://ttes-2019nukl.web.app/">(https://ttes-2019nukl.web.app/)</a>公佈。</li>
+                     </ul>
+                   </li>
+                 </ul>
+                 <section id="mu-divider"></section>
+                 <h2>約戰規則</h2>
+                 <ul class="single-rule">
+                   <li>1. 請雙方隊長利用 <a href="https://discord.gg/tsY7aVX" target="_blank" rel="noopener noreferrer">北科電競社 Discord</a> 群組進行約戰。</li>
+                   <li>2. 官方約戰時間為週二~周五，請在此時間內完成約戰並登記，若禮拜五後尚未完成約戰動作，則統一在官方規定時間進行比賽，未能在官方指定時間出賽者出局。</li>
+                   <li>3. 官方比賽時間為週二~週日。二到五比賽時間為晚上 7:00 到晚上 11:00;六日比賽時間為上午 10:00 到晚上 11:00，在此時段內的比賽官方會盡量派出裁判，而若不是在此時段的比賽則由雙方自行主持。(若同一時段有多組比賽導致人手不足，優先以較早通報約戰時間的隊伍派出裁判。)</li>
+                   <li>4. FB 不需要加入好友就能直接私訊，而若無法私訊或 24 小時後並無回覆，請馬上連絡 Discord 賽事裁判或 FB 北科電競社活動粉絲專頁。</li>
+                   <li>5. 若經調查發現，對於約戰態度消極，主辦方有權將其隊伍判定失格。</li>
+                   <li>6. 若比賽前或比賽中發現對手違反規則(遲到超過 10 分鐘、角色名稱與報名資料不符合.......等等)，請以截圖或提供錄像資料給官方，以利調查。</li>
+                   <li>7. 比賽結束時，請勝方隊長務必將結算畫面清楚截圖並上傳，否則比賽無效。</li>
+                   <li>8. 若調查發現遊戲中選手資料與報名資料不符，該隊伍失去比賽資格。</li>
+                   <li>9. 有任何問題請聯絡主辦單位:<a href="https://www.facebook.com/TaipeiTechESports/" target="_blank" rel="noopener noreferrer">國立臺北科技大學電子競技社</a></li>
+                 </ul>
+               </div>
+               <!-- End common rule -->
+
+               <!-- Start signalItem rule -->
+               <div id="signalItem" class="rule-tabcontent tabcontent">
+                 <h2>個人道具 規章</h2>
+                 <ul>
+                   <li>
+                     <ul class="single-rule">一、參賽資格:
+                       <li>1. 屬於新竹、桃園、新北、台北、基隆、宜蘭之大專院校之學生</li>
+                     </ul>
+                   </li>
+                   <li>
+                     <ul class="single-rule">二、比賽流程:
+                       <li>1. 初賽(128強~32強) : 線上賽，約戰制 60分晉級，11/18~12/07。</li>
+                       <li>2. 16強賽 : 線上賽，約戰制 60分晉級，12/08~12/12。</li>
+                       <li>3. 決賽(季殿冠亞賽) : 線下賽 120分獲勝，預定日期12/14。</li>
+                     </ul>
+                   </li>
+                   <li>
+                     <ul class="single-rule">三、比賽規則:
+                        <li>1. 將依報到隊伍的先後順序分為「編號1~8玩家」，比賽將由「1號玩家」開設房間，邀請「其餘玩家」進入房間。(本開房的規則是在無安排裁判情況下適用，否則一般為裁判開房)</li>
+                        <li>2. 模式 : 個人道具-普通頻道。</li>
+                        <li>3. 比賽使用道具限制:
+                          <ul>
+                            <li>-開放項目 : 飛輪以外全部車款、全部人物、寵物、飛寵、裝備、綠改(加工廠)、X代零件、升級(點數)。</li>
+                            <li>-禁止使用 : 膠囊改裝(強化)。(若使用以上禁止道具，該隊伍即失去該回合分數)</li>
+                          </ul>
+                        </li>
+                        <li>4. 計分方式：得點方式參照團體賽名次計分(第一名10分,第二名8分…第八名1分)，比賽期間先得到門檻分數的選手晉級並離開遊戲房間，由剩餘玩家繼續競爭，當4名晉級選手產生時比賽結束，當同時同分超過門檻且晉級名額不足時，由同分之選手進行加賽，前一張地圖名次較高者擁有選圖權，加賽第一名者優先晉級並退房，重複比賽直至4個晉級名額額滿為止。</li>
+                        <li>5. 選圖方式：由第一名選擇下一場的地圖，第一名晉級離開由第二名順位以次類推，全部地圖選過一輪後才能重複選擇。</li>
+                        <li>6. 賽前須先於地圖「城鎮運河」進行試跑，若試跑或是比賽過程中有選手 Ping 值常駐(非間歇性)高於綠2(不含)，其他選手有權決定是否繼續進行比賽，若選擇不進行賽事則判爆ping者失去參賽資格</li>
+                        <li>7. 比賽開放地圖(共 15 張):
+                          <ul>
+                            <li>城鎮 水壩上的對決</li>
+                            <li>森林 遊擊場</li>
+                            <li>冰河 晶洞穴</li>
+                            <li>礦山 熔岩小徑</li>
+                            <li>侏儸紀 恐龍島的拓荒邀請</li>
+                            <li>墓園 神秘修道院</li>
+                            <li>沙漠 金字塔</li>
+                            <li>工廠 危險的運載所</li>
+                            <li>工廠 砰砰砰大冒險</li>
+                            <li>中華 東方明珠</li>
+                            <li>城鎮 噴泉廣場</li>
+                            <li>海盜 危機大逃亡</li>
+                            <li>太空 宇宙船賽道</li>
+                            <li>月光 地下鐵大逃亡</li>
+                            <li>城堡 路易的密室</li>
+                          </ul>
+                        </li>
+                        <li>8. 強烈建議每位選手配戴「攝影機」道具以錄製 DEMO，若賽後有任何爭議時，可以提出作為備查依據，若有爭議發生時無法提供個人 DEMO 或影片，則視同放棄權力。預設路徑:「C:\Users\user\Documents\跑跑卡丁車」or「我的文件\跑跑丁車」</li>
+                     </ul>
+                   </li>
+                   <li>
+                     <ul class="single-rule">四、注意事項:
+                       <li>1. 參賽隊伍請務必在活動開始前仔細詳閱各項規定，以免影響到自身的權利。</li>
+                       <li>2. 比賽期間使用非法程式或破圖 BUG 者，將取消參賽資格。</li>
+                       <li>3. 如雙方議定開賽，則代表雙方皆已同意賽事前置作業並無問題(如出戰選手 ID 與網站登記之 ID 符合等)，因此主辦方不接受賽後申訴。</li>
+                       <li>4. 比賽結束後，請勝方自行拍攝或螢幕截圖結算畫面，並上傳至 Discord 指定聊天室。敗方無特殊事由請勿隨意上傳憑證、擾亂賽事系統，違規者將被列為拒絕往來戶。</li>
+                       <li>5. 禁止使用外掛軟體，經認定使用外掛者，該隊員及其隊伍將取消資格並永久禁賽。</li>
+                       <li>6. 選手進入比賽時，建議全程錄製影片，做為賽後有任何爭議時，可以提出影片作為備查依據。若有爭議發生時，無法提供個人影片則視同棄權。(錄影方式:遊戲中按下鍵盤 F3 鍵)</li>
+                       <li>7. 請勿使用不雅或不易辨別的隊伍名稱、個人 ID 參加比賽，主辦方有權力決定名稱是否違反規定，經確認違反規定則取消參賽資格。</li>
+                       <li>8. 賽事進行其間參賽者不可對 跑跑卡丁車 ID 作任何修改，違者取消參賽資格。。</li>
+                       <li>9. 參賽者需同意接受本條約規範，參賽者若出現違規行為將被取消資格。</li>
+                       <li>10.選手實際出戰名單須與主辦方所登記名單完全相符，若暱稱不符合者，該隊將取消資格。</li>
+                       <li>12.其他未規定事項，將統一由主辦方於活動網頁<a href="https://ttes-2019nukl.web.app/">(https://ttes-2019nukl.web.app/)</a>公佈。</li>
+                     </ul>
+                   </li>
+                 </ul>
+               </div>
+               <!-- End signalItem rule -->
+
+               <!-- Start signalRacing rule -->
+               <div id="signalRacing" class="rule-tabcontent tabcontent">
+                 <h2>個人競速 規章</h2>
+                 <ul>
+                   <li>
+                     <ul class="single-rule">一、參賽資格:
+                       <li>1. 屬於新竹、桃園、新北、台北、基隆、宜蘭之大專院校之學生</li>
+                     </ul>
+                   </li>
+                   <li>
+                     <ul class="single-rule">二、比賽流程:
+                       <li>1. 初賽(128強~32強) : 線上賽，約戰制 60分晉級，11/18~12/07。</li>
+                       <li>2. 16強賽 : 線上賽，約戰制 60分晉級，12/08~12/12。</li>
+                       <li>3. 決賽(季殿冠亞賽) : 線下賽 120分獲勝，預定日期12/14。</li>
+                     </ul>
+                   </li>
+                   <li>
+                     <ul class="single-rule">三、比賽規則:
+                        <li>1. 將依報到隊伍的先後順序分為「編號1~8玩家」，比賽將由「1號玩家」開設房間，邀請「其餘玩家」進入房間。(本開房的規則是在無安排裁判情況下適用，否則一般為裁判開房)</li>
+                        <li>2. 模式 : 快速頻道-個人競速。</li>
+                        <li>3. 比賽使用道具限制:
+                          <ul>
+                            <li>-開放項目 : 全部車款、全部人物、飛寵、裝備、綠改(加工廠)、X代零件、升級(點數)。</li>
+                            <li>-禁止使用 : 膠囊改裝(強化)、全部寵物、氣球。(若使用以上禁止道具，該隊伍即失去該回合分數)</li>
+                          </ul>
+                        </li>
+                        <li>4. 計分方式：得點方式參照團體賽名次計分(第一名10分,第二名8分…第八名1分)，比賽期間先得到門檻分數的選手晉級並離開遊戲房間，由剩餘玩家繼續競爭，當4名晉級選手產生時比賽結束，當同時同分超過門檻且晉級名額不足時，由同分之選手進行加賽，前一張地圖名次較高者擁有選圖權，加賽第一名者優先晉級並退房，重複比賽直至4個晉級名額額滿為止。</li>
+                        <li>5. 選圖方式：由第一名選擇下一場的地圖，第一名晉級離開由第二名順位以次類推，全部地圖選過一輪後才能重複選擇。</li>
+                        <li>6. 賽前須先於地圖「城鎮運河」進行試跑，若試跑或是比賽過程中有選手 Ping 值常駐(非間歇性)高於綠2(不含)，其他選手有權決定是否繼續進行比賽，若選擇不進行賽事則判爆ping者失去參賽資格</li>
+                        <li>7. 比賽開放地圖(共 15 張):
+                          <ul>
+                            <li>積木樂園 聖誕老人的秘密基地</li>
+                            <li>中華主題 兵馬俑陵寢</li>
+                            <li>世界 杜拜的市中心</li>
+                            <li>城鎮 高速公路</li>
+                            <li>WKC 新加玻 F1賽道</li>
+                            <li>中華主題 拉薩</li>
+                            <li>世界 紐約大疾走</li>
+                            <li>冰河 破碎的冰山</li>
+                            <li>WKC 韓國 F1賽道</li>
+                            <li>太空 蜿蜒跑道</li>
+                            <li>刀劍 雲中峽谷</li>
+                            <li>海盜 懸崖上的決鬥</li>
+                            <li>城堡 隱藏的密室</li>
+                            <li>神域 諸神世界</li>
+                            <li>海濱 大道</li>
+                          </ul>
+                        </li>
+                        <li>8. 強烈建議每位選手配戴「攝影機」道具以錄製 DEMO，若賽後有任何爭議時，可以提出作為備查依據，若有爭議發生時無法提供個人 DEMO 或影片，則視同放棄權力。預設路徑:「C:\Users\user\Documents\跑跑卡丁車」or「我的文件\跑跑丁車」</li>
+                     </ul>
+                   </li>
+                   <li>
+                     <ul class="single-rule">四、注意事項:
+                       <li>1. 參賽隊伍請務必在活動開始前仔細詳閱各項規定，以免影響到自身的權利。</li>
+                       <li>2. 比賽期間使用非法程式或破圖 BUG 者，將取消參賽資格。</li>
+                       <li>3. 如雙方議定開賽，則代表雙方皆已同意賽事前置作業並無問題(如出戰選手 ID 與網站登記之 ID 符合等)，因此主辦方不接受賽後申訴。</li>
+                       <li>4. 比賽結束後，請勝方自行拍攝或螢幕截圖結算畫面，並上傳至 Discord 指定聊天室。敗方無特殊事由請勿隨意上傳憑證、擾亂賽事系統，違規者將被列為拒絕往來戶。</li>
+                       <li>5. 禁止使用外掛軟體，經認定使用外掛者，該隊員及其隊伍將取消資格並永久禁賽。</li>
+                       <li>6. 選手進入比賽時，建議全程錄製影片，做為賽後有任何爭議時，可以提出影片作為備查依據。若有爭議發生時，無法提供個人影片則視同棄權。(錄影方式:遊戲中按下鍵盤 F3 鍵)</li>
+                       <li>7. 請勿使用不雅或不易辨別的隊伍名稱、個人 ID 參加比賽，主辦方有權力決定名稱是否違反規定，經確認違反規定則取消參賽資格。</li>
+                       <li>8. 賽事進行其間參賽者不可對 跑跑卡丁車 ID 作任何修改，違者取消參賽資格。。</li>
+                       <li>9. 參賽者需同意接受本條約規範，參賽者若出現違規行為將被取消資格。</li>
+                       <li>10.選手實際出戰名單須與主辦方所登記名單完全相符，若暱稱不符合者，該隊將取消資格。</li>
+                       <li>12.其他未規定事項，將統一由主辦方於活動網頁<a href="https://ttes-2019nukl.web.app/">(https://ttes-2019nukl.web.app/)</a>公佈。</li>
+                     </ul>
+                   </li>
+                 </ul>
+               </div>
+               <!-- End signalRacing rule -->
+
+               <!-- Start groupRacing rule -->
+               <div id="groupRacing" class="rule-tabcontent tabcontent">
+                 <h2>團體競速 規章</h2>
+                 <ul>
+                   <li>
+                     <ul class="single-rule">一、參賽資格:
+                       <li>1. 屬於新竹、桃園、新北、台北、基隆、宜蘭之大專院校之學生。</li>
+                       <li>2. 團體賽選手需為同一學校之學生，不得跨校組隊。</li>
+                       <li>3. 參賽隊伍，最多 5 人一隊(含候補 1 名)，經報名後不得更換成員。</li>
+                       <li>4. 若參賽隊伍的選手因個人因素無法參賽或帳號違反規範而遭禁賽，導致該隊可參賽人數不足 4 名，則該隊將喪失比賽資格，不得遞補選手。</li>
+                     </ul>
+                   </li>
+                   <li>
+                     <ul class="single-rule">二、比賽流程:
+                       <li>1. 初賽(64強~4強) : 線上賽，約戰制 BO1，搶七，11/11~12/07。</li>
+                       <li>2. 4強 : 線上賽，約戰制 BO1，搶七，12/08~12/12。</li>
+                       <li>3. 決賽(冠亞軍賽) : 線下賽 BO3，搶七，預定日期12/14。</li>
+                     </ul>
+                   </li>
+                   <li>
+                     <ul class="single-rule">三、比賽規則:
+                       <li>1. 將依賽程表上隊伍的先後上下順序分為「上方隊伍」與「下方隊伍」，比賽由「上方隊伍」負責開設房間，邀請「下方隊伍」進入房間。(上下方開房的規則是在無安排裁判情況下適用，否則一般為裁判開房)</li>
+                       <li>2. 模式 : 快速頻道-團體競速 4 vs 4。先行搶奪 7 場賽道的勝者，即獲得該局比賽勝利。</li>
+                       <li>3. 比賽使用道具限制:
+                         <ul>
+                           <li>-開放項目 : 全部車款、全部人物、全部飛寵、綠改(加工廠)、X代零件、升級(點數)。</li>
+                           <li>-禁止使用 : 膠囊改裝(強化)、全部寵物、氣球。(若使用以上禁止道具，該隊伍即失去該回合分數)</li>
+                         </ul>
+                       </li>
+                       <li>4. 雙方賽前須先於地圖「城鎮運河」進行試跑，試跑賽中獲勝的隊伍可指定第一張比賽地圖。之後的地圖則由上一場的敗方隊伍選圖，地圖不可重複選擇(已經使用過之地圖不得再次使用)。試跑結果不計入排分。若試跑或是比賽過程中，乙方有成員 Ping 值常駐(非間歇性)高於綠2(不含)，甲方將有權利要求對方替換候補選手上場。</li>
+                      <li>5. 若替換候補後，乙方成員 Ping 值仍然高於標準，甲方有權決定是否繼續進行比賽，若甲方選擇不進行賽事則判乙方敗北。</li>
+                      <li>6. 比賽開放地圖(共 15 張):
+                        <ul>
+                          <li>積木樂園 聖誕老人的秘密基地</li>
+                          <li>中華主題 兵馬俑陵寢</li>
+                          <li>世界 杜拜的市中心</li>
+                          <li>城鎮 高速公路</li>
+                          <li>WKC 新加玻 F1賽道</li>
+                          <li>中華主題 拉薩</li>
+                          <li>世界 紐約大疾走</li>
+                          <li>冰河 破碎的冰山</li>
+                          <li>WKC 韓國 F1賽道</li>
+                          <li>太空 蜿蜒跑道</li>
+                          <li>刀劍 雲中峽谷</li>
+                          <li>海盜 懸崖上的決鬥</li>
+                          <li>城堡 隱藏的密室</li>
+                          <li>神域 諸神世界</li>
+                          <li>海濱 大道</li>
+                        </ul>
+                      </li>
+                      <li>7. 強烈建議每位選手配戴「攝影機」道具以錄製 DEMO，若賽後有任何爭議時，可以提出作為備查依據，若有爭議發生時無法提供個人 DEMO 或影片，則視同放棄權力。預設路徑:「C:\Users\user\Documents\跑跑卡丁車」or「我的文件\跑跑丁車」</li>
+                     </ul>
+                   </li>
+                   <li>
+                     <ul class="single-rule">四、替補規定:
+                       <li>1. 候補成員報備 : 每隊可以報名 1 名隊員作為候補，賽事必須維持報名的5 個人來進行出賽，候補隊員不得同時擔任其他隊伍的候補或正式隊員。</li>
+                       <li>2. 替補流程 : 須在下一回合開始前與裁判報備，一場賽事內每隊最多換 1次，主辦方有最後的決定權。</li>
+                     </ul>
+                   </li>
+                   <li>
+                     <ul class="single-rule">五、注意事項:
+                       <li>1. 參賽隊伍請務必在活動開始前仔細詳閱各項規定，以免影響到自身的權利。</li>
+                       <li>2. 比賽期間使用非法程式或破圖 BUG 者，將取消參賽資格。</li>
+                       <li>3. 如雙方議定開賽，則代表雙方皆已同意賽事前置作業並無問題(如出戰選手 ID 與網站登記之 ID 符合等)，因此主辦方不接受賽後申訴。</li>
+                       <li>4. 比賽結束後，請勝方自行拍攝或螢幕截圖結算畫面，並上傳至 Discord 指定聊天室。敗方無特殊事由請勿隨意上傳憑證、擾亂賽事系統，違規者將被列為拒絕往來戶。</li>
+                       <li>5. 禁止使用外掛軟體，經認定使用外掛者，該隊員及其隊伍將取消資格並永久禁賽。</li>
+                       <li>6. 選手進入比賽時，建議全程錄製影片，做為賽後有任何爭議時，可以提出影片作為備查依據。若有爭議發生時，無法提供個人影片則視同棄權。(錄影方式:遊戲中按下鍵盤 F3 鍵)</li>
+                       <li>7. 請勿使用不雅或不易辨別的隊伍名稱、個人 ID 參加比賽，主辦方有權力決定名稱是否違反規定，經確認違反規定則取消參賽資格。</li>
+                       <li>8. 賽事進行其間參賽者不可對 跑跑卡丁車 ID 作任何修改，違者取消參賽資格。。</li>
+                       <li>9. 參賽者需同意接受本條約規範，參賽者若出現違規行為將被取消資格。</li>
+                       <li>10.選手實際出戰名單須與主辦方所登記名單完全相符，若暱稱不符合者，該隊將取消資格。</li>
+                       <li>12.其他未規定事項，將統一由主辦方於活動網頁<a href="https://ttes-2019nukl.web.app/">(https://ttes-2019nukl.web.app/)</a>公佈。</li>
+                     </ul>
+                   </li>
+                 </ul>
+               </div>
+               <!-- End groupRacing rule -->
+             </div>
+           </div>
+    </section>
+
+    <!--/.footer-->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                  <div class="footer-top-item">
+                    <p>主辦單位</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="footer-top-item">
+                    <img src="img/icon/ttes_logo.png">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="footer-top-item">
+                    <p>贊助單位</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="footer-top-item">
+                    <img src="img/icon/gtw_logo.png">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="footer-top-item">
+                    <img src="img/icon/tt_logo.png">
+                  </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 footer-bottom">
+                    <hr>
+                    <p>© 2019 國立臺北科技大學電子競技社 TaipeiTech e-Sports Club. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/.footer end-->
+    <script src="js/tabview.js"></script>
+    <script src="js/youtubeplay.js"></script>
+
+</body>
+</HTML>

@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /404.html
+Disallow: /rule.html
+Disallow: /enroll_rule.html
+Disallow: /contact_us.html
+Disallow: /qualify.html
+
+Sitemap: https://ttes-2019nukl.web.app/sitemap.xml

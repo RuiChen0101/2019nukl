@@ -1,0 +1,158 @@
+#banner {
+    height: 300px;
+    background: url(../img/otherpage/banner-background_with_cht.png);
+    background-size: cover;
+    background-position: top;
+    padding: 30px 10%;
+}
+
+#enroll-banner {
+    height: 300px;
+    background: url(../img/otherpage/enroll-banner-background.png);
+    background-size: cover;
+    background-position: top;
+    padding: 30px 10%;
+}
+
+#rule .rule{
+    margin-bottom: 50px;
+    background: url(../img/otherpage/dirty_old_shirt.png);
+    background-size: auto;
+    border:  3px solid #960E0E;
+}
+
+#rule .rule-tab-bar{
+    padding: 2% 0px;
+}
+
+#rule .rule-tab-bar p{
+    font-size: 24px;
+    padding-top: 8px;
+}
+
+#rule .rule-content .rule-tabcontent {
+  display: none;
+  animation: fadeEffect 1s;
+}
+
+#rule .rule-content .rule-tabcontent .single-rule{
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+#rule .rule-content .rule-tabcontent .single-rule li{
+  overflow-wrap: normal;
+  line-height: 2;
+  margin-left: 20px;
+  font-size: 18px;
+  color: #fcfcfc;
+}
+
+#rule .rule-content .rule-tabcontent .enroll-btn-area{
+  width:100%;
+  text-align: center;
+  margin: 20px 0px;
+  padding: 0px 40px;
+}
+
+#rule .rule-content .rule-tabcontent .enroll-btn{
+  width:100%;
+}
+
+#rule .col-sm-2{
+    text-align: center;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.rule-content{
+    color: white;
+    padding: 0px 5%;
+    font-family: Microsoft JhengHei;
+}
+
+.btn-primary{
+    color: #fff;
+    background-color: transparent;
+    border-color:transparent;
+    font-weight: 1000;
+    font-size: 24px;
+    font-family:Microsoft JhengHei;
+}
+
+.btn-primary:hover {
+    color: #FC4850;
+    background-color: transparent;
+    border-color:transparent;
+    font-weight: 1000;
+    font-size: 24px;
+    font-family:Microsoft JhengHei;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #FC4850;
+    background-color: transparent;
+    border-color:transparent;
+    font-weight: 1000;
+    font-size: 24px;
+    font-family:Microsoft JhengHei;
+}
+
+@media screen and (max-width: 768px) {
+
+    #banner {
+        height: 150px;
+    }
+
+    #enroll-banner {
+        height: 150px;
+    }
+
+    .btn-primary, .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
+        font-size: 16px;
+    }
+
+    .sm-hidden {
+        display: none;
+    }
+
+    #rule .rule-content .rule-tabcontent .single-rule{
+        margin-left: 0px;
+        padding: 0px;
+        font-size: 20px;
+    }
+
+    #rule .rule-content{
+        padding: 0px;
+    }
+
+    #rule .rule-content .rule-tabcontent h2{
+      font-size: 26px;
+    }
+
+    #rule .rule-content .rule-tabcontent .single-rule li{
+      font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 350px){
+  .btn-primary, .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
+      font-size: 13px;
+  }
+
+  #rule .rule-content .rule-tabcontent h2{
+    font-size: 24px;
+  }
+
+  #rule .rule-content .rule-tabcontent .single-rule{
+    font-size: 18px;
+  }
+
+  #rule .rule-content .rule-tabcontent .single-rule li{
+    font-size: 14px;
+  }
+}

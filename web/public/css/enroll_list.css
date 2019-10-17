@@ -1,0 +1,48 @@
+#enroll-list {
+  margin: 80px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:  center;
+}
+
+#enroll-list .enroll-list-area {
+  margin: 60px 0px;
+  padding: 30px 0px;
+  background: url(../img/otherpage/dirty_old_shirt.png);
+  background-size: auto;
+  width: 100%;
+  text-align: center;
+  border:  3px solid #960E0E;
+}
+
+#enroll-list .enroll-list-area .enroll-catgory {
+  margin: 30px 0px;
+  padding: 0px 30px;
+  width: 100%;
+  text-align: left;
+}
+
+#enroll-list .enroll-list-area .enroll-catgory h2{
+  margin-left: 60px;
+}
+
+#enroll-list .enroll-list-area .enroll-list-item {
+  width: 100%;
+  text-align: center;
+  background-color: #333743;
+  border: 1px solid #195da1;
+  width: 100%;
+}
+
+#enroll-list .enroll-list-area .enroll-list-item p{
+  margin: 10px 0px;
+}
+
+#enroll-list #status-false #status p{
+  color: #d80000
+}
+
+#enroll-list #status-true #status p{
+  color: #0eca04
+}
