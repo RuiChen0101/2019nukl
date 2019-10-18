@@ -75,49 +75,13 @@
     font-family: Microsoft JhengHei;
 }
 
-.btn-primary{
-    color: #fff;
-    background-color: transparent;
-    border-color:transparent;
-    font-weight: 1000;
-    font-size: 24px;
-    font-family:Microsoft JhengHei;
-}
-
-.btn-primary:hover {
-    color: #FC4850;
-    background-color: transparent;
-    border-color:transparent;
-    font-weight: 1000;
-    font-size: 24px;
-    font-family:Microsoft JhengHei;
-}
-
-.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
-    color: #FC4850;
-    background-color: transparent;
-    border-color:transparent;
-    font-weight: 1000;
-    font-size: 24px;
-    font-family:Microsoft JhengHei;
-}
-
 @media screen and (max-width: 768px) {
-
     #banner {
         height: 150px;
     }
 
     #enroll-banner {
         height: 150px;
-    }
-
-    .btn-primary, .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
-        font-size: 16px;
-    }
-
-    .sm-hidden {
-        display: none;
     }
 
     #rule .rule-content .rule-tabcontent .single-rule{
@@ -140,10 +104,6 @@
 }
 
 @media screen and (max-width: 350px){
-  .btn-primary, .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
-      font-size: 13px;
-  }
-
   #rule .rule-content .rule-tabcontent h2{
     font-size: 24px;
   }

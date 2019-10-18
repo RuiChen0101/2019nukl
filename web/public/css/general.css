@@ -117,10 +117,46 @@ p{
     margin: 0px 30px;
     height: 100%;
 }
+.btn-primary{
+    color: #fff;
+    background-color: transparent;
+    border-color:transparent;
+    font-weight: 1000;
+    font-size: 24px;
+    font-family:Microsoft JhengHei;
+}
+
+.btn-primary:hover {
+    color: #FC4850;
+    background-color: transparent;
+    border-color:transparent;
+    font-weight: 1000;
+    font-size: 24px;
+    font-family:Microsoft JhengHei;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #FC4850;
+    background-color: transparent;
+    border-color:transparent;
+    font-weight: 1000;
+    font-size: 24px;
+    font-family:Microsoft JhengHei;
+}
 
 @media screen and (max-width: 768px){
     #footer .footer-top-item p{
         font-size: 10px;
+    }
+
+    .btn-primary, .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 766px){
+    .sm-hidden {
+        display: none;
     }
 }
 
@@ -148,4 +184,10 @@ p{
     #footer .footer-top-item p{
         font-size: 16px;
     }
+}
+
+@media screen and (max-width: 500px){
+  .btn-primary, .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
+      font-size: 13px;
+  }
 }

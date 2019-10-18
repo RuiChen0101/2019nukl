@@ -50,33 +50,6 @@
   to {opacity: 1;}
 }
 
-.btn-primary{
-    color: #fff;
-    background-color: transparent;
-    border-color:transparent;
-    font-weight: 1000;
-    font-size: 24px;
-    font-family:Microsoft JhengHei;
-}
-
-.btn-primary:hover {
-    color: #FC4850;
-    background-color: transparent;
-    border-color:transparent;
-    font-weight: 1000;
-    font-size: 24px;
-    font-family:Microsoft JhengHei;
-}
-
-.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
-    color: #FC4850;
-    background-color: transparent;
-    border-color:transparent;
-    font-weight: 1000;
-    font-size: 24px;
-    font-family:Microsoft JhengHei;
-}
-
 @media screen and (max-width: 1024px){
   #price .price-area{
     padding: 40px 40px;
@@ -99,21 +72,9 @@
   #price .price-tabcontent .signal-price .col{
       padding:0px 3px;
   }
-
-  .btn-primary, .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
-      font-size: 16px;
-  }
-
-  .sm-hidden {
-      display: none;
-  }
 }
 
 @media screen and (max-width: 500px){
-  .btn-primary, .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
-      font-size: 13px;
-  }
-
   #price .price-tabcontent {
       margin: 20px 0px;
   }
