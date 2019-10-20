@@ -2,6 +2,8 @@ User-agent: *
 Disallow: /404.html
 Disallow: /rule.html
 Disallow: /enroll_rule.html
+Disallow: /enroll_list.html
+Disallow: /price.html
 Disallow: /contact_us.html
 Disallow: /qualify.html
 

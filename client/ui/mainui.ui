@@ -7,312 +7,849 @@
     <x>0</x>
     <y>0</y>
     <width>1000</width>
-    <height>777</height>
+    <height>850</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>1000</width>
-    <height>777</height>
+    <height>850</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>1000</width>
-    <height>777</height>
+    <height>850</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>nukl-enroll-client</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="uncheck_list_label">
+   <widget class="QTabWidget" name="function_tab">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>20</y>
-      <width>151</width>
-      <height>31</height>
+      <x>0</x>
+      <y>10</y>
+      <width>1001</width>
+      <height>831</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>微軟正黑體</family>
-      <pointsize>18</pointsize>
-     </font>
+    <property name="currentIndex">
+     <number>1</number>
     </property>
-    <property name="text">
-     <string>未確認清單</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="checked_list_label">
-    <property name="geometry">
-     <rect>
-      <x>700</x>
-      <y>20</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>微軟正黑體</family>
-      <pointsize>18</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>已確認清單</string>
-    </property>
-   </widget>
-   <widget class="QTableWidget" name="uncheck_list">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>60</y>
-      <width>431</width>
-      <height>381</height>
-     </rect>
-    </property>
-    <property name="editTriggers">
-     <set>QAbstractItemView::NoEditTriggers</set>
-    </property>
-    <property name="selectionMode">
-     <enum>QAbstractItemView::SingleSelection</enum>
-    </property>
-    <property name="selectionBehavior">
-     <enum>QAbstractItemView::SelectRows</enum>
-    </property>
-    <attribute name="horizontalHeaderDefaultSectionSize">
-     <number>84</number>
-    </attribute>
-    <column>
-     <property name="text">
-      <string>報名時間</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>ID</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>項目</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>學校</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>docID</string>
-     </property>
-    </column>
-   </widget>
-   <widget class="QTableWidget" name="checked_list">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>60</y>
-      <width>431</width>
-      <height>701</height>
-     </rect>
-    </property>
-    <property name="editTriggers">
-     <set>QAbstractItemView::NoEditTriggers</set>
-    </property>
-    <property name="selectionMode">
-     <enum>QAbstractItemView::SingleSelection</enum>
-    </property>
-    <property name="selectionBehavior">
-     <enum>QAbstractItemView::SelectRows</enum>
-    </property>
-    <attribute name="horizontalHeaderDefaultSectionSize">
-     <number>84</number>
-    </attribute>
-    <column>
-     <property name="text">
-      <string>報名時間</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>ID</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>項目</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>學校</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>docID</string>
-     </property>
-    </column>
-   </widget>
-   <widget class="QPushButton" name="check_btn">
-    <property name="geometry">
-     <rect>
-      <x>460</x>
-      <y>130</y>
-      <width>81</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>微軟正黑體</family>
-     </font>
-    </property>
-    <property name="text">
-     <string>確認&gt;&gt;</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="cancel_btn">
-    <property name="geometry">
-     <rect>
-      <x>460</x>
-      <y>180</y>
-      <width>81</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>微軟正黑體</family>
-     </font>
-    </property>
-    <property name="text">
-     <string>&lt;&lt;取消</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="delete_btn">
-    <property name="geometry">
-     <rect>
-      <x>460</x>
-      <y>230</y>
-      <width>81</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>微軟正黑體</family>
-     </font>
-    </property>
-    <property name="text">
-     <string>X刪除X</string>
-    </property>
-   </widget>
-   <widget class="QTableWidget" name="deleted_list">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>500</y>
-      <width>431</width>
-      <height>261</height>
-     </rect>
-    </property>
-    <property name="editTriggers">
-     <set>QAbstractItemView::NoEditTriggers</set>
-    </property>
-    <property name="selectionMode">
-     <enum>QAbstractItemView::SingleSelection</enum>
-    </property>
-    <property name="selectionBehavior">
-     <enum>QAbstractItemView::SelectRows</enum>
-    </property>
-    <attribute name="horizontalHeaderDefaultSectionSize">
-     <number>84</number>
-    </attribute>
-    <column>
-     <property name="text">
-      <string>報名時間</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>ID</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>項目</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>學校</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>docID</string>
-     </property>
-    </column>
-   </widget>
-   <widget class="QLabel" name="deleted_list_label">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>460</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>微軟正黑體</family>
-      <pointsize>18</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>已刪除清單</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="relife_btn">
-    <property name="geometry">
-     <rect>
-      <x>460</x>
-      <y>660</y>
-      <width>81</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>微軟正黑體</family>
-     </font>
-    </property>
-    <property name="text">
-     <string>回復</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="refresh_btn">
-    <property name="geometry">
-     <rect>
-      <x>460</x>
-      <y>590</y>
-      <width>81</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>微軟正黑體</family>
-     </font>
-    </property>
-    <property name="text">
-     <string>重整</string>
-    </property>
+    <widget class="QWidget" name="enroll_check_tab">
+     <attribute name="title">
+      <string>報到確認</string>
+     </attribute>
+     <widget class="QPushButton" name="cancel_btn">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>180</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;&lt;取消</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="checked_list">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>60</y>
+        <width>431</width>
+        <height>701</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>84</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>報名時間</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>項目</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>學校</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>docID</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="check_btn">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>130</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>確認&gt;&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="uncheck_list_label">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>20</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>未確認清單</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="checked_list_label">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>20</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>已確認清單</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="delete_btn">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>230</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>X刪除X</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="deleted_list">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>500</y>
+        <width>431</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>84</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>報名時間</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>項目</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>學校</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>docID</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QLabel" name="deleted_list_label">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>460</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>已刪除清單</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="refresh_btn">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>590</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>重整</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="uncheck_list">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>431</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>84</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>報名時間</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>項目</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>學校</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>docID</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="relife_btn">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>660</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>回復</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="match_tab">
+     <attribute name="title">
+      <string>場次用</string>
+     </attribute>
+     <widget class="QLabel" name="total_player_list_label">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>40</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>選手總名單</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="catgory_list">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>101</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="maxCount">
+       <number>3</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>個人競速</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>個人道具</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>團體競速</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="match_list_lable">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>40</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>比賽清單</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="total_player_list">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>80</y>
+        <width>341</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>84</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>項目</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>學校</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>docID</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QTableWidget" name="match_list">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>80</y>
+        <width>431</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>84</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>組別</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>類別</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>項目</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>狀態</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>docID</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QComboBox" name="round_list">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>101</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="maxCount">
+       <number>6</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>128強</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>64強</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>32強</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>16強</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>8強</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4強</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QTableWidget" name="player_list">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>430</y>
+        <width>341</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>84</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>項目</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>學校</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>docID</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QLabel" name="player_list_label">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>390</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>比賽選手名單</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="add_btn">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>330</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>加入↓</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="remove_btn">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>330</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>取消↑</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="delete_match_btn">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>330</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>刪除比賽</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="new_match_btn">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>330</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>新比賽</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="advance_player_list">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>430</y>
+        <width>341</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>84</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>項目</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>學校</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>docID</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QLabel" name="advance_player_list_label">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>390</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>晉級選手名單</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="add_advance_btn">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>470</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>晉級&gt;&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="cancel_advance_btn">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>530</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;&lt;取消</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="save_btn">
+      <property name="geometry">
+       <rect>
+        <x>800</x>
+        <y>720</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>儲存</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="status_list">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>730</y>
+        <width>101</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="maxCount">
+       <number>3</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>已建立</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>已約戰</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>已完成</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QDateTimeEdit" name="match_time">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>730</y>
+        <width>194</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
    </widget>
   </widget>
  </widget>
