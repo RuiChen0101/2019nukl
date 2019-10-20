@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis(['nukl_enroll_client.py'],
+a = Analysis([main.py'],
              pathex=['E:\\北科電競社\\2019北區跑跑聯賽\\site\\client'],
              binaries=[],
              datas=[('roots.pem', 'grpc/_cython/_credentials/')],
@@ -23,7 +23,7 @@ exe = EXE(pyz,
           a.zipfiles,
           a.datas,
           [],
-          name='nukl_enroll_client',
+          name='nukl_client',
           debug=False,
           bootloader_ignore_signals=False,
           strip=False,
