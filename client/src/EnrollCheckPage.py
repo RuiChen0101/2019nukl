@@ -5,10 +5,9 @@ from src.model.EnrollInfo import EnrollInfo
 
 
 class EnrollCheckPage():
-    def __init__(self, uiRef, dbRef):
+    def __init__(self, uiRef, enrollInfoRef):
         self.ui=uiRef
-        self.db=dbRef
-        self.enrollInfo=EnrollInfo(dbRef)
+        self.enrollInfo=enrollInfoRef
         self.ui.check_btn.clicked.connect(self.onCheckClick)
         self.ui.cancel_btn.clicked.connect(self.onCancelClick)
         self.ui.delete_btn.clicked.connect(self.onDeleteClick)

@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file './src/ui/MatchFinishDialog.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.2
+# Created by: PyQt5 UI code generator 5.10.1
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 
 class Ui_match_finish_dialog(object):
     def setupUi(self, match_finish_dialog):
@@ -102,5 +101,4 @@ class Ui_match_finish_dialog(object):
         self.cancel_btn.setText(_translate("match_finish_dialog", "<<取消"))
         self.ok.setText(_translate("match_finish_dialog", "確認"))
         self.cancel.setText(_translate("match_finish_dialog", "取消"))
-
 

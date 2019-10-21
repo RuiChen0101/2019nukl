@@ -6,18 +6,22 @@ from src.model.EnrollInfo import EnrollInfo
 from src.Arrangement import Arrangement
 from src.MatchFinish import MatchFinish
 from src.NewMatch import NewMatch
+from src.SetReplay import SetReplay
+from src.JudgeAssign import JudgeAssign
 
 class MatchControlPage():
-    def __init__(self, uiRef, dbRef, main):
+    def __init__(self, uiRef, matchInfoRef, enrollInfoRef, main):
         self.ui=uiRef
-        self.db=dbRef
         self.main=main
-        self.matchInfo=MatchInfo(dbRef)
-        self.enrollInfo=EnrollInfo(dbRef)
+        self.matchInfo=matchInfoRef
+        self.enrollInfo=enrollInfoRef
         self.ui.new_match_btn.clicked.connect(self.onNewMatchClick)
         self.ui.set_arrangement_btn.clicked.connect(self.onSetArrangementClick)
         self.ui.match_finish_btn.clicked.connect(self.onMatchFinishClick)
         self.ui.delete_match_btn.clicked.connect(self.onDeleteMatchClick)
+        self.ui.delete_match_btn.clicked.connect(self.onDeleteMatchClick)
+        self.ui.set_replay_btn.clicked.connect(self.onSetReplayClick)
+        self.ui.judge_assign_btn.clicked.connect(self.onJudgeAssignClick)
         self.ui.catgory_list.currentIndexChanged.connect(self.onCatOrRoundChange)
         self.ui.round_list.currentIndexChanged.connect(self.onCatOrRoundChange)
         self.ui.match_list.itemSelectionChanged.connect(self.onMatchListSelectionChange)
@@ -36,15 +40,18 @@ class MatchControlPage():
         self.ui.set_arrangement_btn.setEnabled(False)
         self.ui.match_finish_btn.setEnabled(False)
         self.ui.set_replay_btn.setEnabled(False)
+        self.ui.judge_assign_btn.setEnabled(False)
         idList=self.matchInfo.getMatchList(self.ui.catgory_list.currentText(), self.ui.round_list.currentText())
         table=self.ui.match_list
         for id in idList:
             count=table.rowCount()
             table.insertRow(count)
-            table.setItem(count, 0, QtWidgets.QTableWidgetItem(self.matchInfo.getGroup(id)))
+            table.setItem(count, 0, QtWidgets.QTableWidgetItem(str(self.matchInfo.getGroup(id))))
             table.setItem(count, 1, QtWidgets.QTableWidgetItem(self.matchInfo.getCatogoryName(id)))
             table.setItem(count, 2, QtWidgets.QTableWidgetItem(self.matchInfo.getStatusName(id)))
-            table.setItem(count, 3, QtWidgets.QTableWidgetItem(id))
+            table.setItem(count, 3, QtWidgets.QTableWidgetItem(self.matchInfo.getJudge(id)))
+            table.setItem(count, 4, QtWidgets.QTableWidgetItem(self.matchInfo.getTime(id)))
+            table.setItem(count, 5, QtWidgets.QTableWidgetItem(id))
 
     def onCatOrRoundChange(self):
         self.ui.match_list.clearSelection()
@@ -55,7 +62,7 @@ class MatchControlPage():
     def onMatchListSelectionChange(self):
         if self.ui.match_list.currentRow()==-1:
             return
-        docId=self.ui.match_list.item(self.ui.match_list.currentRow(),3).text()
+        docId=self.ui.match_list.item(self.ui.match_list.currentRow(),5).text()
         self.ui.group.setText(self.matchInfo.getGroup(docId))
         self.ui.catgory.setText(self.matchInfo.getCatogoryName(docId))
         self.ui.round.setText(self.matchInfo.getRound(docId))
@@ -65,6 +72,7 @@ class MatchControlPage():
         self.ui.set_arrangement_btn.setEnabled(self.matchInfo.isArrangable(docId))
         self.ui.match_finish_btn.setEnabled(self.matchInfo.isFinishable(docId))
         self.ui.set_replay_btn.setEnabled(self.matchInfo.isReplaySetable(docId))
+        self.ui.judge_assign_btn.setEnabled(self.matchInfo.isAssignable(docId))
         self.setUpPlayerList(docId)
         self.setUpAdvancedList(docId)
 
@@ -89,7 +97,7 @@ class MatchControlPage():
             table.setItem(count, 1, QtWidgets.QTableWidgetItem(self.matchInfo.getPlayerScore(docId,id)))
 
     def onDeleteMatchClick(self):
-        docId=self.ui.match_list.item(self.ui.match_list.currentRow(),3).text()
+        docId=self.ui.match_list.item(self.ui.match_list.currentRow(),5).text()
         reply = QMessageBox.information(self.main,'刪除','確認刪除?', QMessageBox.Ok | QMessageBox.Close, QMessageBox.Close)
         if reply == QMessageBox.Ok:
             self.matchInfo.deleteMatch(docId)
@@ -104,7 +112,7 @@ class MatchControlPage():
             self.setUpUi()
 
     def onSetArrangementClick(self):
-        docId=self.ui.match_list.item(self.ui.match_list.currentRow(),3).text()
+        docId=self.ui.match_list.item(self.ui.match_list.currentRow(),5).text()
         dialog=Arrangement()
         result=dialog.exec()
         if result==QDialog.Accepted:
@@ -112,6 +120,25 @@ class MatchControlPage():
             self.matchInfo.setArrangement(docId, dateTime)
             self.setUpUi()
 
+    def onJudgeAssignClick(self):
+        docId=self.ui.match_list.item(self.ui.match_list.currentRow(),5).text()
+        dialog=JudgeAssign()
+        result=dialog.exec()
+        if result==QDialog.Accepted:
+            judge=dialog.getResult()
+            self.matchInfo.setJudge(docId,judge)
+            self.setUpUi()
+
+    def onSetReplayClick(self):
+        docId=self.ui.match_list.item(self.ui.match_list.currentRow(),5).text()
+        dialog=SetReplay()
+        result=dialog.exec()
+        if result==QDialog.Accepted:
+            url=dialog.getResult()
+            self.matchInfo.setReplay(docId,url)
+            self.setUpUi()
+
     def onMatchFinishClick(self):
+        docId=self.ui.match_list.item(self.ui.match_list.currentRow(),5).text()
         dialog=MatchFinish()
         dialog.exec()

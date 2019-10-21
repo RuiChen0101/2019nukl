@@ -23,6 +23,7 @@ class MatchInfo():
             'group':group,
             'player':playerList,
             'round':round,
+            'judge':'-',
             'status':'created'
         }
         self.db.newMatch(data)
@@ -32,13 +33,28 @@ class MatchInfo():
         self.db.deleteMatch(docId)
         self._idList, self._itemList=self.db.downloadMatchItem()
 
+    def setJudge(self, docId, judge):
+        data={
+            'judge':judge
+        }
+        self.db.updateMatchDb(docId,data)
+        self._itemList[docId]['judge']=judge
+
+    def setReplay(self, docId, url):
+        data={
+            'replay':url
+        }
+        self.db.updateMatchDb(docId,data)
+        self._itemList[docId]['replay']=url
+
     def setArrangement(self, docId, dateTime):
         data={
             'matchTime':dateTime,
             'status':'arranged'
         }
         self.db.updateMatchDb(docId,data)
-        self._idList, self._itemList=self.db.downloadMatchItem()
+        self._itemList[docId]['matchTime']=dateTime
+        self._itemList[docId]['status']='arranged'
 
     def getRound(self, docId):
         return self._itemList[docId]['round']
@@ -49,6 +65,9 @@ class MatchInfo():
 
     def getCatogory(self, docId):
         return self._itemList[docId]['cat']
+
+    def getJudge(self, docId):
+        return self._itemList[docId]['judge']
 
     def getGroup(self, docId):
         return self._itemList[docId]['group']
@@ -88,6 +107,11 @@ class MatchInfo():
         return False
 
     def isFinishable(self, docId):
+        if(self.getStatus(docId)=="arranged"):
+            return True
+        return False
+
+    def isAssignable(self, docId):
         if(self.getStatus(docId)=="arranged"):
             return True
         return False

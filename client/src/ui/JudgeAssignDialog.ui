@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>set_replay_dialog</class>
- <widget class="QDialog" name="set_replay_dialog">
+ <class>judge_assign_dialog</class>
+ <widget class="QDialog" name="judge_assign_dialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -25,7 +25,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLineEdit" name="url">
+  <widget class="QLineEdit" name="judge">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -47,7 +47,7 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="url_label">
+  <widget class="QLabel" name="judge_label">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -63,7 +63,7 @@
     </font>
    </property>
    <property name="text">
-    <string>URL:</string>
+    <string>裁判:</string>
    </property>
   </widget>
   <widget class="QPushButton" name="cancel_btn">
