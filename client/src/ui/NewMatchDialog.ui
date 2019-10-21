@@ -171,7 +171,7 @@
     <string>加入&gt;&gt;</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="cancel_btn">
+  <widget class="QPushButton" name="remove_btn">
    <property name="geometry">
     <rect>
      <x>370</x>
@@ -309,7 +309,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="ok">
+  <widget class="QPushButton" name="ok_btn">
    <property name="geometry">
     <rect>
      <x>650</x>
@@ -327,7 +327,7 @@
     <string>確認</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="cancel">
+  <widget class="QPushButton" name="cancel_btn">
    <property name="geometry">
     <rect>
      <x>550</x>

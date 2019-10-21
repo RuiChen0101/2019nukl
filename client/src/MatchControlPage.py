@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QMainWindow
+from PyQt5.QtWidgets import QMainWindow,QDialog,QMessageBox
 from PyQt5 import QtWidgets, QtCore
 from src.ui.mainwindow import Ui_MainWindow
 from src.model.MatchInfo import MatchInfo
@@ -8,14 +8,16 @@ from src.MatchFinish import MatchFinish
 from src.NewMatch import NewMatch
 
 class MatchControlPage():
-    def __init__(self, uiRef, dbRef):
+    def __init__(self, uiRef, dbRef, main):
         self.ui=uiRef
         self.db=dbRef
+        self.main=main
         self.matchInfo=MatchInfo(dbRef)
         self.enrollInfo=EnrollInfo(dbRef)
         self.ui.new_match_btn.clicked.connect(self.onNewMatchClick)
         self.ui.set_arrangement_btn.clicked.connect(self.onSetArrangementClick)
         self.ui.match_finish_btn.clicked.connect(self.onMatchFinishClick)
+        self.ui.delete_match_btn.clicked.connect(self.onDeleteMatchClick)
         self.ui.catgory_list.currentIndexChanged.connect(self.onCatOrRoundChange)
         self.ui.round_list.currentIndexChanged.connect(self.onCatOrRoundChange)
         self.ui.match_list.itemSelectionChanged.connect(self.onMatchListSelectionChange)
@@ -23,6 +25,8 @@ class MatchControlPage():
 
     def setUpUi(self):
         self.ui.match_list.setRowCount(0)
+        self.ui.player_list.setRowCount(0)
+        self.ui.advance_player_list.setRowCount(0)
         self.ui.group.setText("")
         self.ui.catgory.setText("")
         self.ui.round.setText("")
@@ -49,6 +53,8 @@ class MatchControlPage():
         self.setUpUi()
 
     def onMatchListSelectionChange(self):
+        if self.ui.match_list.currentRow()==-1:
+            return
         docId=self.ui.match_list.item(self.ui.match_list.currentRow(),3).text()
         self.ui.group.setText(self.matchInfo.getGroup(docId))
         self.ui.catgory.setText(self.matchInfo.getCatogoryName(docId))
@@ -65,6 +71,7 @@ class MatchControlPage():
     def setUpPlayerList(self, docId):
         palyerId=self.matchInfo.getPlayerList(docId)
         table=self.ui.player_list
+        table.setRowCount(0)
         for id in palyerId:
             count=table.rowCount()
             table.insertRow(count)
@@ -74,19 +81,36 @@ class MatchControlPage():
     def setUpAdvancedList(self, docId):
         palyerId=self.matchInfo.getAdvanceList(docId)
         table=self.ui.advance_player_list
+        table.setRowCount(0)
         for id in palyerId:
             count=table.rowCount()
             table.insertRow(count)
             table.setItem(count, 0, QtWidgets.QTableWidgetItem(self.enrollInfo.getName(id)))
             table.setItem(count, 1, QtWidgets.QTableWidgetItem(self.matchInfo.getPlayerScore(docId,id)))
 
+    def onDeleteMatchClick(self):
+        docId=self.ui.match_list.item(self.ui.match_list.currentRow(),3).text()
+        reply = QMessageBox.information(self.main,'刪除','確認刪除?', QMessageBox.Ok | QMessageBox.Close, QMessageBox.Close)
+        if reply == QMessageBox.Ok:
+            self.matchInfo.deleteMatch(docId)
+            self.setUpUi()
+
     def onNewMatchClick(self):
-        dialog=NewMatch(self.matchInfo,self.enrollInfo,self.ui.catgory_list.currentText(), self.ui.round_list.currentText())
-        dialog.exec()
+        dialog=NewMatch(self.enrollInfo,self.ui.catgory_list.currentText(), self.ui.round_list.currentText())
+        result=dialog.exec()
+        if result==QDialog.Accepted:
+            group, playerList=dialog.getResult()
+            self.matchInfo.createNewMatch(self.ui.catgory_list.currentText(),self.ui.round_list.currentText(),group,playerList)
+            self.setUpUi()
 
     def onSetArrangementClick(self):
+        docId=self.ui.match_list.item(self.ui.match_list.currentRow(),3).text()
         dialog=Arrangement()
-        dialog.exec()
+        result=dialog.exec()
+        if result==QDialog.Accepted:
+            dateTime=dialog.getResult()
+            self.matchInfo.setArrangement(docId, dateTime)
+            self.setUpUi()
 
     def onMatchFinishClick(self):
         dialog=MatchFinish()

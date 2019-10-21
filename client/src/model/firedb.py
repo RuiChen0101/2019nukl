@@ -18,6 +18,13 @@ class firedb:
         doc_ref=self.match_ref.document(docId)
         doc_ref.update(data)
 
+    def newMatch(self, data):
+        self.match_ref.add(data)
+
+    def deleteMatch(self, docId):
+        doc_ref=self.match_ref.document(docId)
+        doc_ref.delete()
+
     def handelRefresh(self):
         self._downloadEnrollItem()
         self._downloadMatchItem()

@@ -25,7 +25,7 @@
   <property name="windowTitle">
    <string>約戰時間</string>
   </property>
-  <widget class="QPushButton" name="cancel">
+  <widget class="QPushButton" name="cancel_btn">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -43,7 +43,7 @@
     <string>取消</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="ok">
+  <widget class="QPushButton" name="ok_btn">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -61,7 +61,7 @@
     <string>確認</string>
    </property>
   </widget>
-  <widget class="QCalendarWidget" name="calendarWidget">
+  <widget class="QCalendarWidget" name="date">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -70,8 +70,15 @@
      <height>183</height>
     </rect>
    </property>
+   <property name="selectedDate">
+    <date>
+     <year>2019</year>
+     <month>11</month>
+     <day>11</day>
+    </date>
+   </property>
   </widget>
-  <widget class="QTimeEdit" name="timeEdit">
+  <widget class="QTimeEdit" name="time">
    <property name="geometry">
     <rect>
      <x>100</x>

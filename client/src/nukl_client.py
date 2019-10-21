@@ -11,5 +11,5 @@ class AppWindow(QMainWindow):
         self.ui.setupUi(self)
         self.db=firedb()
         self.enrollCheck=EnrollCheckPage(self.ui, self.db)
-        self.matchControl=MatchControlPage(self.ui, self.db)
+        self.matchControl=MatchControlPage(self.ui, self.db, self)
         self.show()

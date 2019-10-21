@@ -16,7 +16,28 @@ class MatchInfo():
                 result.append(id)
         return result
 
-    def createNewMatch(self,playerList):
+    def createNewMatch(self,cat,round,group,playerList):
+        rcatList={"個人競速":'sracing',"個人道具":'sitem',"團體競速":'gracing'}
+        data={
+            'cat':rcatList[cat],
+            'group':group,
+            'player':playerList,
+            'round':round,
+            'status':'created'
+        }
+        self.db.newMatch(data)
+        self._idList, self._itemList=self.db.downloadMatchItem()
+
+    def deleteMatch(self, docId):
+        self.db.deleteMatch(docId)
+        self._idList, self._itemList=self.db.downloadMatchItem()
+
+    def setArrangement(self, docId, dateTime):
+        data={
+            'matchTime':dateTime,
+            'status':'arranged'
+        }
+        self.db.updateMatchDb(docId,data)
         self._idList, self._itemList=self.db.downloadMatchItem()
 
     def getRound(self, docId):
