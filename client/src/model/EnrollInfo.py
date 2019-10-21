@@ -11,7 +11,7 @@ class EnrollInfo():
 
     def setStstus(self, docId, status):
         self._itemList[docId]['checked']=status
-        self.db.updateEnrollChecked(docId, status)
+        self.db.updateEnrollChecked(docId, {'checked' : status})
 
     def getStstus(self, docId):
         return self._itemList[docId]['checked']
@@ -22,7 +22,7 @@ class EnrollInfo():
     def getSchool(self, docId):
         return self._itemList[docId]['school']
 
-    def getCatogory(self, docId):
+    def getCatogoryName(self, docId):
         catlist={'sracing':"個人競速",'sitem':"個人道具",'gracing':"團體競速"}
         return catlist[self._itemList[docId]['cat']]
 
@@ -39,6 +39,13 @@ class EnrollInfo():
 
     def getIdList(self):
         return self._idList
+
+    def getIdListByCatRound(self, cat, round):
+        result=[]
+        for id in self._idList:
+            if self.getRound(id)==round and self.getCatogoryName(id)==cat:
+                result.append(id)
+        return result
 
     def refresh(self):
         self._idList, self._itemList=self.db.downloadEnrollItem()

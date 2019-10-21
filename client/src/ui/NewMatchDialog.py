@@ -2,11 +2,12 @@
 
 # Form implementation generated from reading ui file './src/ui/NewMatchDialog.ui'
 #
-# Created by: PyQt5 UI code generator 5.10.1
+# Created by: PyQt5 UI code generator 5.12.2
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_new_match_dialog(object):
     def setupUi(self, new_match_dialog):
@@ -53,7 +54,7 @@ class Ui_new_match_dialog(object):
         self.player_list.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
         self.player_list.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.player_list.setObjectName("player_list")
-        self.player_list.setColumnCount(3)
+        self.player_list.setColumnCount(4)
         self.player_list.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
         self.player_list.setHorizontalHeaderItem(0, item)
@@ -61,6 +62,8 @@ class Ui_new_match_dialog(object):
         self.player_list.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
         self.player_list.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.player_list.setHorizontalHeaderItem(3, item)
         self.player_list.horizontalHeader().setDefaultSectionSize(84)
         self.add_btn = QtWidgets.QPushButton(new_match_dialog)
         self.add_btn.setGeometry(QtCore.QRect(370, 150, 91, 41))
@@ -75,20 +78,20 @@ class Ui_new_match_dialog(object):
         self.cancel_btn.setFont(font)
         self.cancel_btn.setObjectName("cancel_btn")
         self.catgory = QtWidgets.QLabel(new_match_dialog)
-        self.catgory.setGeometry(QtCore.QRect(130, 450, 111, 31))
+        self.catgory.setGeometry(QtCore.QRect(130, 450, 141, 31))
         font = QtGui.QFont()
         font.setFamily("微軟正黑體")
         font.setPointSize(18)
         self.catgory.setFont(font)
-        self.catgory.setAlignment(QtCore.Qt.AlignCenter)
+        self.catgory.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.catgory.setObjectName("catgory")
         self.round = QtWidgets.QLabel(new_match_dialog)
-        self.round.setGeometry(QtCore.QRect(130, 490, 111, 31))
+        self.round.setGeometry(QtCore.QRect(130, 490, 141, 31))
         font = QtGui.QFont()
         font.setFamily("微軟正黑體")
         font.setPointSize(18)
         self.round.setFont(font)
-        self.round.setAlignment(QtCore.Qt.AlignCenter)
+        self.round.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.round.setObjectName("round")
         self.catgory_label = QtWidgets.QLabel(new_match_dialog)
         self.catgory_label.setGeometry(QtCore.QRect(20, 450, 111, 31))
@@ -115,7 +118,7 @@ class Ui_new_match_dialog(object):
         self.group_label.setAlignment(QtCore.Qt.AlignCenter)
         self.group_label.setObjectName("group_label")
         self.group = QtWidgets.QLineEdit(new_match_dialog)
-        self.group.setGeometry(QtCore.QRect(132, 409, 111, 31))
+        self.group.setGeometry(QtCore.QRect(132, 409, 121, 31))
         self.group.setObjectName("group")
         self.ok = QtWidgets.QPushButton(new_match_dialog)
         self.ok.setGeometry(QtCore.QRect(650, 470, 91, 41))
@@ -152,6 +155,8 @@ class Ui_new_match_dialog(object):
         item.setText(_translate("new_match_dialog", "項目"))
         item = self.player_list.horizontalHeaderItem(2)
         item.setText(_translate("new_match_dialog", "輪數"))
+        item = self.player_list.horizontalHeaderItem(3)
+        item.setText(_translate("new_match_dialog", "docID"))
         self.add_btn.setText(_translate("new_match_dialog", "加入>>"))
         self.cancel_btn.setText(_translate("new_match_dialog", "<<取消"))
         self.catgory.setText(_translate("new_match_dialog", "個人競速"))
@@ -161,4 +166,5 @@ class Ui_new_match_dialog(object):
         self.group_label.setText(_translate("new_match_dialog", "組別:"))
         self.ok.setText(_translate("new_match_dialog", "確認"))
         self.cancel.setText(_translate("new_match_dialog", "取消"))
+
 

@@ -10,9 +10,13 @@ class firedb:
         self.enroll_ref = self._db.collection('enroll-Info')
         self.match_ref = self._db.collection('match-Info')
 
-    def updateEnrollChecked(self, docId, status):
+    def updateEnrollDb(self, docId, data):
         doc_ref=self.enroll_ref.document(docId)
-        doc_ref.update({'checked': status})
+        doc_ref.update(data)
+
+    def updateMatchDb(self, docId, data):
+        doc_ref=self.match_ref.document(docId)
+        doc_ref.update(data)
 
     def handelRefresh(self):
         self._downloadEnrollItem()

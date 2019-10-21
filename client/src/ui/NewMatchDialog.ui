@@ -147,6 +147,11 @@
      <string>輪數</string>
     </property>
    </column>
+   <column>
+    <property name="text">
+     <string>docID</string>
+    </property>
+   </column>
   </widget>
   <widget class="QPushButton" name="add_btn">
    <property name="geometry">
@@ -189,7 +194,7 @@
     <rect>
      <x>130</x>
      <y>450</y>
-     <width>111</width>
+     <width>141</width>
      <height>31</height>
     </rect>
    </property>
@@ -203,7 +208,7 @@
     <string>個人競速</string>
    </property>
    <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="round">
@@ -211,7 +216,7 @@
     <rect>
      <x>130</x>
      <y>490</y>
-     <width>111</width>
+     <width>141</width>
      <height>31</height>
     </rect>
    </property>
@@ -225,7 +230,7 @@
     <string>128強</string>
    </property>
    <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="catgory_label">
@@ -299,7 +304,7 @@
     <rect>
      <x>132</x>
      <y>409</y>
-     <width>111</width>
+     <width>121</width>
      <height>31</height>
     </rect>
    </property>

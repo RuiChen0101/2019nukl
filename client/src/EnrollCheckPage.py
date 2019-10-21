@@ -28,7 +28,7 @@ class EnrollCheckPage():
             table.insertRow(count)
             table.setItem(count, 0, QtWidgets.QTableWidgetItem(self.enrollInfo.getTimeInterval(id)))
             table.setItem(count, 1, QtWidgets.QTableWidgetItem(self.enrollInfo.getName(id)))
-            table.setItem(count, 2, QtWidgets.QTableWidgetItem(self.enrollInfo.getCatogory(id)))
+            table.setItem(count, 2, QtWidgets.QTableWidgetItem(self.enrollInfo.getCatogoryName(id)))
             table.setItem(count, 3, QtWidgets.QTableWidgetItem(self.enrollInfo.getSchool(id)))
             table.setItem(count, 4, QtWidgets.QTableWidgetItem(id))
         self.ui.uncheck_list.sortItems(2, QtCore.Qt.AscendingOrder)
