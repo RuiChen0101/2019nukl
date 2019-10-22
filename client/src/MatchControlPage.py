@@ -19,7 +19,6 @@ class MatchControlPage():
         self.ui.set_arrangement_btn.clicked.connect(self.onSetArrangementClick)
         self.ui.match_finish_btn.clicked.connect(self.onMatchFinishClick)
         self.ui.delete_match_btn.clicked.connect(self.onDeleteMatchClick)
-        self.ui.delete_match_btn.clicked.connect(self.onDeleteMatchClick)
         self.ui.set_replay_btn.clicked.connect(self.onSetReplayClick)
         self.ui.judge_assign_btn.clicked.connect(self.onJudgeAssignClick)
         self.ui.catgory_list.currentIndexChanged.connect(self.onCatOrRoundChange)
@@ -63,7 +62,7 @@ class MatchControlPage():
         if self.ui.match_list.currentRow()==-1:
             return
         docId=self.ui.match_list.item(self.ui.match_list.currentRow(),5).text()
-        self.ui.group.setText(self.matchInfo.getGroup(docId))
+        self.ui.group.setText(str(self.matchInfo.getGroup(docId)))
         self.ui.catgory.setText(self.matchInfo.getCatogoryName(docId))
         self.ui.round.setText(self.matchInfo.getRound(docId))
         self.ui.status.setText(self.matchInfo.getStatusName(docId))
@@ -140,5 +139,9 @@ class MatchControlPage():
 
     def onMatchFinishClick(self):
         docId=self.ui.match_list.item(self.ui.match_list.currentRow(),5).text()
-        dialog=MatchFinish()
-        dialog.exec()
+        dialog=MatchFinish(self.enrollInfo, self.matchInfo.getPlayerList(docId), self.matchInfo.getCatogoryName(docId))
+        result=dialog.exec()
+        if result==QDialog.Accepted:
+            scoreList, advanceList=dialog.getResult()
+            self.matchInfo.setFinish(docId, scoreList, advanceList)
+            self.setUpUi()

@@ -57,7 +57,7 @@
     </rect>
    </property>
    <property name="editTriggers">
-    <set>QAbstractItemView::NoEditTriggers</set>
+    <set>QAbstractItemView::DoubleClicked</set>
    </property>
    <property name="selectionMode">
     <enum>QAbstractItemView::SingleSelection</enum>
@@ -78,6 +78,11 @@
      <string>比賽分數</string>
     </property>
    </column>
+   <column>
+    <property name="text">
+     <string>docId</string>
+    </property>
+   </column>
   </widget>
   <widget class="QTableWidget" name="advance_player_list">
    <property name="geometry">
@@ -89,7 +94,7 @@
     </rect>
    </property>
    <property name="editTriggers">
-    <set>QAbstractItemView::DoubleClicked</set>
+    <set>QAbstractItemView::NoEditTriggers</set>
    </property>
    <property name="selectionMode">
     <enum>QAbstractItemView::SingleSelection</enum>
@@ -151,7 +156,7 @@
     <string>加入&gt;&gt;</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="cancel_btn">
+  <widget class="QPushButton" name="remove_btn">
    <property name="geometry">
     <rect>
      <x>220</x>
@@ -169,7 +174,7 @@
     <string>&lt;&lt;取消</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="ok">
+  <widget class="QPushButton" name="ok_btn">
    <property name="geometry">
     <rect>
      <x>400</x>
@@ -187,7 +192,7 @@
     <string>確認</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="cancel">
+  <widget class="QPushButton" name="cancel_btn">
    <property name="geometry">
     <rect>
      <x>300</x>

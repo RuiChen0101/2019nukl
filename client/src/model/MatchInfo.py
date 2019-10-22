@@ -53,8 +53,16 @@ class MatchInfo():
             'status':'arranged'
         }
         self.db.updateMatchDb(docId,data)
-        self._itemList[docId]['matchTime']=dateTime
-        self._itemList[docId]['status']='arranged'
+        self._idList, self._itemList=self.db.downloadMatchItem()
+
+    def setFinish(self, docId, scoreList, advanceList):
+        data={
+            'player':scoreList,
+            'advanced':advanceList,
+            'status':'finished'
+        }
+        self.db.updateMatchDb(docId,data)
+        self._idList, self._itemList=self.db.downloadMatchItem()
 
     def getRound(self, docId):
         return self._itemList[docId]['round']
@@ -95,7 +103,7 @@ class MatchInfo():
         return self._itemList[docId]['advanced']
 
     def getTime(self, docId):
-        if(self.getStatus(docId)=="created"):
+        if self.getStatus(docId)=="created":
             return "--"
         time=self._itemList[docId]['matchTime'].timestamp_pb()
         time=datetime.fromtimestamp(time.seconds)

@@ -11,7 +11,7 @@ class EnrollInfo():
 
     def setStstus(self, docId, status):
         self._itemList[docId]['checked']=status
-        self.db.updateEnrollChecked(docId, {'checked' : status})
+        self.db.updateEnrollDb(docId, {'checked' : status})
 
     def getStstus(self, docId):
         return self._itemList[docId]['checked']
