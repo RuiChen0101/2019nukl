@@ -2,11 +2,12 @@
 
 # Form implementation generated from reading ui file './src/ui/NewMatchDialog.ui'
 #
-# Created by: PyQt5 UI code generator 5.10.1
+# Created by: PyQt5 UI code generator 5.12.2
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_new_match_dialog(object):
     def setupUi(self, new_match_dialog):
@@ -165,4 +166,5 @@ class Ui_new_match_dialog(object):
         self.group_label.setText(_translate("new_match_dialog", "組別:"))
         self.ok_btn.setText(_translate("new_match_dialog", "確認"))
         self.cancel_btn.setText(_translate("new_match_dialog", "取消"))
+
 

@@ -477,8 +477,13 @@
        <number>0</number>
       </property>
       <property name="maxCount">
-       <number>6</number>
+       <number>7</number>
       </property>
+      <item>
+       <property name="text">
+        <string>初賽</string>
+       </property>
+      </item>
       <item>
        <property name="text">
         <string>128強</string>

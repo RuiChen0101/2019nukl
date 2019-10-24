@@ -55,13 +55,18 @@ class MatchInfo():
         self.db.updateMatchDb(docId,data)
         self._idList, self._itemList=self.db.downloadMatchItem()
 
-    def setFinish(self, docId, scoreList, advanceList):
-        data={
+    def setFinish(self, docId, scoreList, advanceList, nextRound):
+        matchData={
             'player':scoreList,
             'advanced':advanceList,
             'status':'finished'
         }
-        self.db.updateMatchDb(docId,data)
+        self.db.updateMatchDb(docId,matchData)
+        playerData={
+            'round':nextRound
+        }
+        for id in advanceList:
+            self.db.updateEnrollDb(id,playerData)
         self._idList, self._itemList=self.db.downloadMatchItem()
 
     def getRound(self, docId):

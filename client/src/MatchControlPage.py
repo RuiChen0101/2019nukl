@@ -142,6 +142,6 @@ class MatchControlPage():
         dialog=MatchFinish(self.enrollInfo, self.matchInfo.getPlayerList(docId), self.matchInfo.getCatogoryName(docId))
         result=dialog.exec()
         if result==QDialog.Accepted:
-            scoreList, advanceList=dialog.getResult()
-            self.matchInfo.setFinish(docId, scoreList, advanceList)
+            scoreList, advanceList, nextRound=dialog.getResult()
+            self.matchInfo.setFinish(docId, scoreList, advanceList, nextRound)
             self.setUpUi()

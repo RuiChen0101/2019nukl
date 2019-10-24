@@ -13,6 +13,7 @@ class MatchFinish(QDialog):
         self._enrollInfo=enrollInfo
         self._advanceList=[]
         self._scoreList={}
+        self._nextRound="64強"
         self._advanceListLimit= 1 if cat=="團體競速" else 4
         self.ui.ok_btn.clicked.connect(self.onOkClick)
         self.ui.cancel_btn.clicked.connect(self.onCancelClick)
@@ -21,7 +22,7 @@ class MatchFinish(QDialog):
         self.setUpUi()
 
     def getResult(self):
-        return self._scoreList, self._advanceList
+        return self._scoreList, self._advanceList, self._nextRound
 
     def setUpUi(self):
         table=self.ui.player_list
@@ -33,6 +34,8 @@ class MatchFinish(QDialog):
             table.setItem(count, 0, QtWidgets.QTableWidgetItem(self._enrollInfo.getName(id)))
             table.setItem(count, 1, QtWidgets.QTableWidgetItem("0"))
             table.setItem(count, 2, QtWidgets.QTableWidgetItem(id))
+        for i in range(self.ui.player_list.rowCount()):
+            self._scoreList[self.ui.player_list.item(i,2).text()]=int(self.ui.player_list.item(i,1).text())
         self.ui.player_list.cellChanged.connect(self.onCellChange)
 
     def updatePlayerList(self):
@@ -60,6 +63,7 @@ class MatchFinish(QDialog):
         self.updatePlayerList()
 
     def onOkClick(self):
+        self._nextRound=self.ui.next_round.currentText()
         self.accept()
 
     def onCancelClick(self):

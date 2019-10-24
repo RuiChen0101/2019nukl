@@ -2,11 +2,12 @@
 
 # Form implementation generated from reading ui file './src/ui/MatchFinishDialog.ui'
 #
-# Created by: PyQt5 UI code generator 5.10.1
+# Created by: PyQt5 UI code generator 5.12.2
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_match_finish_dialog(object):
     def setupUi(self, match_finish_dialog):
@@ -82,8 +83,29 @@ class Ui_match_finish_dialog(object):
         font.setFamily("微軟正黑體")
         self.cancel_btn.setFont(font)
         self.cancel_btn.setObjectName("cancel_btn")
+        self.next_round_label = QtWidgets.QLabel(match_finish_dialog)
+        self.next_round_label.setGeometry(QtCore.QRect(30, 350, 91, 31))
+        font = QtGui.QFont()
+        font.setFamily("微軟正黑體")
+        font.setPointSize(16)
+        self.next_round_label.setFont(font)
+        self.next_round_label.setObjectName("next_round_label")
+        self.next_round = QtWidgets.QComboBox(match_finish_dialog)
+        self.next_round.setGeometry(QtCore.QRect(130, 350, 111, 31))
+        font = QtGui.QFont()
+        font.setFamily("微軟正黑體")
+        font.setPointSize(12)
+        self.next_round.setFont(font)
+        self.next_round.setMaxCount(5)
+        self.next_round.setObjectName("next_round")
+        self.next_round.addItem("")
+        self.next_round.addItem("")
+        self.next_round.addItem("")
+        self.next_round.addItem("")
+        self.next_round.addItem("")
 
         self.retranslateUi(match_finish_dialog)
+        self.next_round.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(match_finish_dialog)
 
     def retranslateUi(self, match_finish_dialog):
@@ -105,4 +127,11 @@ class Ui_match_finish_dialog(object):
         self.remove_btn.setText(_translate("match_finish_dialog", "<<取消"))
         self.ok_btn.setText(_translate("match_finish_dialog", "確認"))
         self.cancel_btn.setText(_translate("match_finish_dialog", "取消"))
+        self.next_round_label.setText(_translate("match_finish_dialog", "下一輪:"))
+        self.next_round.setItemText(0, _translate("match_finish_dialog", "64強"))
+        self.next_round.setItemText(1, _translate("match_finish_dialog", "32強"))
+        self.next_round.setItemText(2, _translate("match_finish_dialog", "16強"))
+        self.next_round.setItemText(3, _translate("match_finish_dialog", "8強"))
+        self.next_round.setItemText(4, _translate("match_finish_dialog", "4強"))
+
 

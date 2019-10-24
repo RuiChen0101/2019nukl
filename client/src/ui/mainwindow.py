@@ -2,11 +2,12 @@
 
 # Form implementation generated from reading ui file './src/ui/mainui.ui'
 #
-# Created by: PyQt5 UI code generator 5.10.1
+# Created by: PyQt5 UI code generator 5.12.2
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -178,8 +179,9 @@ class Ui_MainWindow(object):
         self.match_list.horizontalHeader().setDefaultSectionSize(84)
         self.round_list = QtWidgets.QComboBox(self.match_tab)
         self.round_list.setGeometry(QtCore.QRect(30, 50, 101, 22))
-        self.round_list.setMaxCount(6)
+        self.round_list.setMaxCount(7)
         self.round_list.setObjectName("round_list")
+        self.round_list.addItem("")
         self.round_list.addItem("")
         self.round_list.addItem("")
         self.round_list.addItem("")
@@ -413,12 +415,13 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "約戰日期"))
         item = self.match_list.horizontalHeaderItem(5)
         item.setText(_translate("MainWindow", "docID"))
-        self.round_list.setItemText(0, _translate("MainWindow", "128強"))
-        self.round_list.setItemText(1, _translate("MainWindow", "64強"))
-        self.round_list.setItemText(2, _translate("MainWindow", "32強"))
-        self.round_list.setItemText(3, _translate("MainWindow", "16強"))
-        self.round_list.setItemText(4, _translate("MainWindow", "8強"))
-        self.round_list.setItemText(5, _translate("MainWindow", "4強"))
+        self.round_list.setItemText(0, _translate("MainWindow", "初賽"))
+        self.round_list.setItemText(1, _translate("MainWindow", "128強"))
+        self.round_list.setItemText(2, _translate("MainWindow", "64強"))
+        self.round_list.setItemText(3, _translate("MainWindow", "32強"))
+        self.round_list.setItemText(4, _translate("MainWindow", "16強"))
+        self.round_list.setItemText(5, _translate("MainWindow", "8強"))
+        self.round_list.setItemText(6, _translate("MainWindow", "4強"))
         item = self.player_list.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "ID"))
         item = self.player_list.horizontalHeaderItem(1)
@@ -446,4 +449,5 @@ class Ui_MainWindow(object):
         self.set_replay_btn.setText(_translate("MainWindow", "儲存直播紀錄"))
         self.judge_assign_btn.setText(_translate("MainWindow", "裁判指派"))
         self.function_tab.setTabText(self.function_tab.indexOf(self.match_tab), _translate("MainWindow", "場次用"))
+
 

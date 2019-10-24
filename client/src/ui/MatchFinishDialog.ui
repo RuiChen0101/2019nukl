@@ -210,6 +210,72 @@
     <string>取消</string>
    </property>
   </widget>
+  <widget class="QLabel" name="next_round_label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>350</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微軟正黑體</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>下一輪:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="next_round">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>350</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微軟正黑體</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <property name="maxCount">
+    <number>5</number>
+   </property>
+   <item>
+    <property name="text">
+     <string>64強</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>32強</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>16強</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>8強</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4強</string>
+    </property>
+   </item>
+  </widget>
  </widget>
  <resources/>
  <connections/>
