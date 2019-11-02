@@ -40,14 +40,6 @@
   margin: 10px 0px;
 }
 
-#enroll-list #status-false #status p{
-  color: #d80000
-}
-
-#enroll-list #sracing-true #status p, #enroll-list #sitem-true #status p, #enroll-list #gracing-true #status p{
-  color: #0eca04
-}
-
 @media screen and (max-width: 768px){
 
   #enroll-list .enroll-list-area .enroll-catgory h2{
