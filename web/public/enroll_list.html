@@ -51,51 +51,11 @@
       <div class="container">
         <div class="enroll-list-area">
           <h1>報名名單</h1>
-          <div class="row justify-content-center align-items-center rule-tab-bar">
-               <div class="col-sm-2 col-5">
-                 <button id="defaultOpen" class="btn btn-primary tablinks" onclick="openTab(event, 'status-false')">未報到</button>
-               </div>
-              <p>|</p>
-               <div class="col-sm-2 col-5">
-                 <button class="btn btn-primary tablinks" onclick="openTab(event, 'sracing-true')">個人競速</button>
-               </div>
-              <p class="sm-hidden">|</p>
-               <div class="col-sm-2 col-5">
-                 <button class="btn btn-primary tablinks" onclick="openTab(event, 'sitem-true')">個人道具</button>
-               </div>
-              <p>|</p>
-               <div class="col-sm-2 col-5">
-                 <button class="btn btn-primary tablinks" onclick="openTab(event, 'gracing-true')">團體競速</button>
-               </div>
-          </div>
 
-          <div id="status-false" class="enroll-catgory tabcontent">
-            <h2>未報到</h2>
-            <div class="enroll-list-item">
-              <div class="row">
-                <div class="col sm-hidden">
-                  <p>報名時間</p>
-                </div>
-                <div class="col">
-                  <p>名稱</p>
-                </div>
-                <div class="col sm-hidden">
-                  <p>比賽項目</p>
-                </div>
-                <div class="col">
-                  <p>狀態</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="sracing-true" class="enroll-catgory  tabcontent">
+          <div id="sracing" class="enroll-catgory">
             <h2>個人競速</h2>
             <div class="enroll-list-item">
               <div class="row">
-                <div class="col sm-hidden">
-                  <p>報名時間</p>
-                </div>
                 <div class="col">
                   <p>遊戲ID</p>
                 </div>
@@ -103,19 +63,16 @@
                   <p>比賽項目</p>
                 </div>
                 <div class="col">
-                  <p>狀態</p>
+                  <p>學校</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div id="sitem-true" class="enroll-catgory  tabcontent">
+          <div id="sitem" class="enroll-catgory">
             <h2>個人道具</h2>
             <div class="enroll-list-item">
               <div class="row">
-                <div class="col sm-hidden">
-                  <p>報名時間</p>
-                </div>
                 <div class="col">
                   <p>遊戲ID</p>
                 </div>
@@ -123,19 +80,16 @@
                   <p>比賽項目</p>
                 </div>
                 <div class="col">
-                  <p>狀態</p>
+                  <p>學校</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div id="gracing-true" class="enroll-catgory  tabcontent">
+          <div id="gracing" class="enroll-catgory">
             <h2>團體競速</h2>
             <div class="enroll-list-item">
               <div class="row">
-                <div class="col sm-hidden">
-                  <p>報名時間</p>
-                </div>
                 <div class="col">
                   <p>隊伍名稱</p>
                 </div>
@@ -143,7 +97,7 @@
                   <p>比賽項目</p>
                 </div>
                 <div class="col">
-                  <p>狀態</p>
+                  <p>學校</p>
                 </div>
               </div>
             </div>
@@ -199,16 +153,14 @@
     <template id="enroll-info-template">
       <div class="enroll-list-item">
         <div class="row">
-          <div id="time" class="col sm-hidden"></div>
           <div id="name" class="col"></div>
           <div id="cat" class="col sm-hidden"></div>
-          <div id="status" class="col"></div>
+          <div id="school" class="col"></div>
         </div>
       </div>
     </template>
     <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
     <script src="js/enroll_list_catch.js"></script>
-    <script src="js/tabview.js"></script>
 </body>
 </HTML>
