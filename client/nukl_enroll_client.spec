@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis([main.py'],
+a = Analysis(['main.py'],
              pathex=['E:\\北科電競社\\2019北區跑跑聯賽\\site\\client'],
              binaries=[],
              datas=[('roots.pem', 'grpc/_cython/_credentials/')],
