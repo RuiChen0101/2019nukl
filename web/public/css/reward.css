@@ -1,4 +1,4 @@
-#price{
+#reward{
   width: 100%;
   margin: 80px 0px;
   display: flex;
@@ -6,7 +6,7 @@
   justify-content:  center;
 }
 
-#price .price-area{
+#reward .reward-area{
   width: 100%;
   padding: 40px 80px;
   background: url(../img/otherpage/dirty_old_shirt.png);
@@ -14,32 +14,32 @@
   border:  3px solid #960E0E;
 }
 
-#price .price-tab-bar{
+#reward .reward-tab-bar{
     text-align: center;
 }
 
-#price .price-tab-bar p{
+#reward .reward-tab-bar p{
     font-size: 24px;
     padding-top: 8px;
 }
 
-#price .price-tabcontent {
+#reward .reward-tabcontent {
     margin: 50px 0px;
 }
 
-#price .price-tabcontent .signal-price{
+#reward .reward-tabcontent .signal-reward{
     margin: 50px 0px;
 }
 
-#price .price-tabcontent .signal-price .signal-price-left {
+#reward .reward-tabcontent .signal-reward .signal-reward-left {
     margin: 20px 0px;
 }
 
-#price .price-tabcontent .price-tabcontent-title {
+#reward .reward-tabcontent .reward-tabcontent-title {
     margin: 25px 0px;
 }
 
-#price .price-tabcontent img{
+#reward .reward-tabcontent img{
     width: 100%;
     height: auto;
     border: 5px solid #960E0E;
@@ -51,44 +51,44 @@
 }
 
 @media screen and (max-width: 1024px){
-  #price .price-area{
+  #reward .reward-area{
     padding: 40px 40px;
   }
 }
 
 @media screen and (max-width: 768px){
-  #price{
+  #reward{
     margin: 20px 0px;
   }
 
-  #price .price-area{
+  #reward .reward-area{
     padding: 20px 10px;
   }
 
-  #price .price-tabcontent .price-tabcontent-title h2{
+  #reward .reward-tabcontent .reward-tabcontent-title h2{
       font-size: 26px;
   }
 
-  #price .price-tabcontent .signal-price .col{
+  #reward .reward-tabcontent .signal-reward .col{
       padding:0px 3px;
   }
 }
 
 @media screen and (max-width: 500px){
-  #price .price-tabcontent {
+  #reward .reward-tabcontent {
       margin: 20px 0px;
   }
 
-  #price .price-tabcontent .signal-price h3{
+  #reward .reward-tabcontent .signal-reward h3{
       font-size: 20px;
   }
 
-  #price .price-tabcontent .signal-price p{
+  #reward .reward-tabcontent .signal-reward p{
       font-size: 12px;
       margin: 0px 0px 4px 0px;
   }
 
-  #price .price-tabcontent .signal-price .signal-price-left {
+  #reward .reward-tabcontent .signal-reward .signal-reward-left {
       margin: 3px 0px;
   }
 }

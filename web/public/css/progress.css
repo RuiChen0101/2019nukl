@@ -1,0 +1,44 @@
+#progress{
+  width: 100%;
+  margin: 80px 0px;
+  display: flex;
+  align-items: center;
+  justify-content:  center;
+}
+
+#progress .progress-area{
+  width: 100%;
+  padding: 40px 80px;
+  background: url(../img/otherpage/dirty_old_shirt.png);
+  background-size: auto;
+  border:  3px solid #960E0E;
+}
+
+#progress .progress-area .progress-list-item {
+  width: 100%;
+  text-align: center;
+  background-color: #333743;
+  border: 1px solid #195da1;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+#progress .progress-area .progress-list-item p{
+  margin: 10px 0px;
+}
+
+@media screen and (max-width: 1024px){
+  #progress .progress-area{
+    padding: 40px 40px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  #progress{
+    margin: 20px 0px;
+  }
+
+  #progress .progress-area{
+    padding: 20px 10px;
+  }
+}
