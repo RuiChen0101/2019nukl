@@ -1,3 +1,4 @@
+from pytz import timezone
 from datetime import datetime
 from PyQt5.QtWidgets import QDialog
 from PyQt5 import QtWidgets, QtCore
@@ -15,11 +16,11 @@ class Arrangement(QDialog):
 
     def getResult(self):
         return self.dateTime
-        
+
     def onOkClick(self):
-        date=self.ui.date.selectedDate()
-        time=self.ui.time.setDate(date)
-        self.dateTime=self.ui.time.dateTime().toPyDateTime()
+        date=self.ui.date.selectedDate().toPyDate()
+        time=self.ui.time.time().toPyTime()
+        self.dateTime=datetime.combine(date,time, tzinfo=timezone('Etc/GMT-8'))
         self.accept()
 
     def onCancelClick(self):
