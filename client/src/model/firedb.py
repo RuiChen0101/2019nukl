@@ -46,3 +46,12 @@ class firedb:
             _enrollIdList.append(doc.id)
             _enrollItemList[doc.id]=doc.to_dict()
         return _enrollIdList, _enrollItemList
+
+# if __name__=="__main__":
+#     db=firedb()
+#     matchIdList, matchItemList=db.downloadMatchItem();
+#     for id in matchIdList:
+#         playerData={
+#             'replay':'-'
+#         }
+#         db.updateMatchDb(id,playerData)

@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file './src/ui/SetReplayDialog.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.2
+# Created by: PyQt5 UI code generator 5.10.1
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 
 class Ui_set_replay_dialog(object):
     def setupUi(self, set_replay_dialog):
@@ -53,5 +52,4 @@ class Ui_set_replay_dialog(object):
         self.url_label.setText(_translate("set_replay_dialog", "URL:"))
         self.cancel_btn.setText(_translate("set_replay_dialog", "取消"))
         self.ok_btn.setText(_translate("set_replay_dialog", "確認"))
-
 

@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file './src/ui/NewMatchDialog.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.2
+# Created by: PyQt5 UI code generator 5.10.1
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 
 class Ui_new_match_dialog(object):
     def setupUi(self, new_match_dialog):
@@ -119,6 +118,10 @@ class Ui_new_match_dialog(object):
         self.group_label.setObjectName("group_label")
         self.group = QtWidgets.QLineEdit(new_match_dialog)
         self.group.setGeometry(QtCore.QRect(132, 409, 121, 31))
+        font = QtGui.QFont()
+        font.setFamily("微軟正黑體")
+        font.setPointSize(12)
+        self.group.setFont(font)
         self.group.setObjectName("group")
         self.ok_btn = QtWidgets.QPushButton(new_match_dialog)
         self.ok_btn.setGeometry(QtCore.QRect(650, 470, 91, 41))
@@ -166,5 +169,4 @@ class Ui_new_match_dialog(object):
         self.group_label.setText(_translate("new_match_dialog", "組別:"))
         self.ok_btn.setText(_translate("new_match_dialog", "確認"))
         self.cancel_btn.setText(_translate("new_match_dialog", "取消"))
-
 

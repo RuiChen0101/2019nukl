@@ -24,6 +24,7 @@ class MatchInfo():
             'player':playerList,
             'round':round,
             'judge':'-',
+            'replay':'-',
             'status':'created'
         }
         self.db.newMatch(data)

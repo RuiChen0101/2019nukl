@@ -308,6 +308,12 @@
      <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>微軟正黑體</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
   </widget>
   <widget class="QPushButton" name="ok_btn">
    <property name="geometry">

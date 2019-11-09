@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file './src/ui/JudgeAssignDialog.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.2
+# Created by: PyQt5 UI code generator 5.10.1
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 
 class Ui_judge_assign_dialog(object):
     def setupUi(self, judge_assign_dialog):
@@ -53,5 +52,4 @@ class Ui_judge_assign_dialog(object):
         self.judge_label.setText(_translate("judge_assign_dialog", "裁判:"))
         self.cancel_btn.setText(_translate("judge_assign_dialog", "取消"))
         self.ok_btn.setText(_translate("judge_assign_dialog", "確認"))
-
 

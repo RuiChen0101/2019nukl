@@ -51,6 +51,7 @@ class MatchControlPage():
             table.setItem(count, 3, QtWidgets.QTableWidgetItem(self.matchInfo.getJudge(id)))
             table.setItem(count, 4, QtWidgets.QTableWidgetItem(self.matchInfo.getTime(id)))
             table.setItem(count, 5, QtWidgets.QTableWidgetItem(id))
+        self.ui.match_list.sortItems(0)
 
     def onCatOrRoundChange(self):
         self.ui.match_list.clearSelection()

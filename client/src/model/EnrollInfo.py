@@ -27,8 +27,7 @@ class EnrollInfo():
         return catlist[self._itemList[docId]['cat']]
 
     def getRound(self, docId):
-        # return self._itemList[docId]['round']
-        return "128強"
+        return self._itemList[docId]['round']
 
     def getTimeInterval(self, docId):
         time=self._itemList[docId]['time'].timestamp_pb()

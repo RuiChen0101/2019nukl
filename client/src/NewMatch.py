@@ -34,6 +34,7 @@ class NewMatch(QDialog):
             table.setItem(count, 1, QtWidgets.QTableWidgetItem(self.enrollInfo.getCatogoryName(id)))
             table.setItem(count, 2, QtWidgets.QTableWidgetItem(self.enrollInfo.getRound(id)))
             table.setItem(count, 3, QtWidgets.QTableWidgetItem(id))
+        self.ui.total_player_list.sortItems(0)
 
     def updatePlayerList(self):
         table=self.ui.player_list

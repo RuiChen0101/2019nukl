@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file './src/ui/mainui.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.2
+# Created by: PyQt5 UI code generator 5.10.1
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -449,5 +448,4 @@ class Ui_MainWindow(object):
         self.set_replay_btn.setText(_translate("MainWindow", "儲存直播紀錄"))
         self.judge_assign_btn.setText(_translate("MainWindow", "裁判指派"))
         self.function_tab.setTabText(self.function_tab.indexOf(self.match_tab), _translate("MainWindow", "場次用"))
-
 
