@@ -6,5 +6,9 @@ Disallow: /enroll_list.html
 Disallow: /reward.html
 Disallow: /contact_us.html
 Disallow: /qualify.html
+Disallow: /progress.html
+Disallow: /gracing_grouping.html
+Disallow: /sracing_grouping.html
+Disallow: /sitem_grouping.html
 
 Sitemap: https://ttes-2019nukl.web.app/sitemap.xml

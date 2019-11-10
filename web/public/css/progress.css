@@ -28,7 +28,18 @@
 }
 
 #progress .progress-area .progress-list-item p{
+  font-size: 18px;
   margin: 10px 0px;
+}
+
+#progress .progress-area .progress-list-item i{
+  font-size: 18px;
+  margin: 15px 0px;
+  color: #fcfcfc;
+}
+
+#progress .progress-area .progress-list-item i:hover{
+  color: #FC4850
 }
 
 #progress .progress-area .progress-grouping{
@@ -52,17 +63,25 @@
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 766px){
   #progress{
     margin: 20px 0px;
   }
 
   #progress .progress-area{
-    padding: 20px 10px;
+    padding: 10px 10px;
   }
 
   #progress .progress-area .progress-grouping iframe{
     height: 400px;
+  }
+
+  #progress .progress-tabcontent h1{
+    font-size: 25px;
+  }
+
+  #progress .progress-area .progress-tab-bar .tablinks{
+    font-size: 20px;
   }
 }
 

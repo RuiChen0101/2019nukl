@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href='css/general.css'>
     <link rel="stylesheet" href='css/progress.css'>
+    <link rel="stylesheet" href='css/all.css'>
 </head>
 
 <body class="bg-0e">
@@ -52,37 +53,17 @@
       <div class="container">
         <div class="progress-area">
           <div class="row justify-content-center align-items-center progress-tab-bar">
-               <div class="col-sm-2 col-5">
-                 <button id="defaultOpen" class="btn btn-primary tablinks" onclick="openTab(event, 'recentProgress')">近期比賽</button>
-               </div>
-              <p>|</p>
-               <div class="col-sm-2 col-5">
-                 <button class="btn btn-primary tablinks" onclick="openTab(event, 'signalRacing')">個人競速</button>
+               <div class="col-sm-2">
+                 <button id="defaultOpen" class="btn btn-primary tablinks" onclick="openTab(event, 'signalRacing')">個人競速</button>
                </div>
               <p class="sm-hidden">|</p>
-               <div class="col-sm-2 col-5">
+               <div class="col-sm-2">
                  <button class="btn btn-primary tablinks" onclick="openTab(event, 'signalItem')">個人道具</button>
                </div>
-              <p>|</p>
-               <div class="col-sm-2 col-5">
+              <p class="sm-hidden">|</p>
+               <div class="col-sm-2">
                  <button class="btn btn-primary tablinks" onclick="openTab(event, 'groupRacing')">團體競速</button>
                </div>
-          </div>
-          <div id="recentProgress" class="progress-tabcontent tabcontent">
-            <h1>近期比賽</h1>
-            <div class="progress-list-item">
-              <div class="row">
-                <div class="col">
-                  <p>比賽項目</p>
-                </div>
-                <div class="col">
-                  <p>分組</p>
-                </div>
-                <div class="col">
-                  <p>比賽時間</p>
-                </div>
-              </div>
-            </div>
           </div>
           <div id="signalRacing" class="progress-tabcontent tabcontent">
             <h1>個人競速</h1>
@@ -97,7 +78,7 @@
                 <div class="col sm-hidden">
                   <p>比賽時間</p>
                 </div>
-                <div class="col">
+                <div class="col-4">
                   <p>晉級選手</p>
                 </div>
                 <div class="col">
@@ -119,7 +100,7 @@
                 <div class="col sm-hidden">
                   <p>比賽時間</p>
                 </div>
-                <div class="col">
+                <div class="col-4">
                   <p>晉級選手</p>
                 </div>
                 <div class="col">
@@ -141,7 +122,7 @@
                 <div class="col sm-hidden">
                   <p>比賽時間</p>
                 </div>
-                <div class="col">
+                <div class="col-4">
                   <p>比賽結果</p>
                 </div>
                 <div class="col">
@@ -197,7 +178,20 @@
             </div>
         </div>
     </footer>
+    <template id="match-info-template">
+      <div class="progress-list-item">
+        <div class="row">
+          <div id="round" class="col"></div>
+          <div id="time" class="col sm-hidden"></div>
+          <div id="result" class="col-4"></div>
+          <div id="replay" class="col"></div>
+        </div>
+      </div>
+    </template>
     <!--/.footer end-->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
     <script src="js/tabview.js"></script>
+    <script src="js/progress_loader.js"></script>
 </body>
 </HTML>
