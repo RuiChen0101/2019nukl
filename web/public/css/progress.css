@@ -83,6 +83,14 @@
   #progress .progress-area .progress-tab-bar .tablinks{
     font-size: 20px;
   }
+
+  #progress .progress-area .progress-list-item p{
+    font-size: 16px;
+  }
+
+  #progress .progress-area .progress-list-item i{
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 413px){
@@ -92,5 +100,14 @@
 
   #progress .progress-area .progress-grouping iframe{
     height: 300px;
+  }
+
+  #progress .progress-area .progress-list-item p{
+    font-size: 14px;
+  }
+
+  #progress .progress-area .progress-list-item i{
+    font-size: 14px;
+    margin: 12px 0px;
   }
 }
