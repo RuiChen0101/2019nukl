@@ -9,6 +9,7 @@ class firedb:
         self._db = firestore.client()
         self.enroll_ref = self._db.collection('enroll-Info')
         self.match_ref = self._db.collection('match-Info')
+        self.record_ref = self._db.collection('track-record')
 
     def updateEnrollDb(self, docId, data):
         doc_ref=self.enroll_ref.document(docId)
@@ -18,16 +19,16 @@ class firedb:
         doc_ref=self.match_ref.document(docId)
         doc_ref.update(data)
 
+    def updateRecordDb(self, docId, data):
+        doc_ref=self.record_ref.document(docId)
+        doc_ref.update(data)
+
     def newMatch(self, data):
         self.match_ref.add(data)
 
     def deleteMatch(self, docId):
         doc_ref=self.match_ref.document(docId)
         doc_ref.delete()
-
-    def handelRefresh(self):
-        self._downloadEnrollItem()
-        self._downloadMatchItem()
 
     def downloadMatchItem(self):
         _matchIdList=[]
@@ -47,11 +48,19 @@ class firedb:
             _enrollItemList[doc.id]=doc.to_dict()
         return _enrollIdList, _enrollItemList
 
+    def downloadRecordItem(self,docId):
+        doc = self.record_ref.document(docId).get().to_dict()
+        _trackList=doc['track-list']
+        _recordItemList=doc['record']
+        return _trackList, _recordItemList
+
 # if __name__=="__main__":
 #     db=firedb()
-#     matchIdList, matchItemList=db.downloadMatchItem();
-#     for id in matchIdList:
-#         playerData={
-#             'replay':'-'
-#         }
-#         db.updateMatchDb(id,playerData)
+#     trackList, recordItemList=db.downloadRecordItem("signalRacing")
+#     initRecord={}
+#     for track in trackList:
+#         template={"holder":"N/A","record":"N/A"}
+#         initRecord[track]=template
+#     data={"record":initRecord}
+#     db.updateRecordDb("signalRacing",data)
+#     print(initRecord)

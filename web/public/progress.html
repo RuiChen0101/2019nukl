@@ -35,6 +35,9 @@
                     <a class="nav-link" href="#">賽程表</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="record.html">賽道紀錄</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="reward.html">賽事獎項</a>
                 </li>
                 <li class="nav-item">
@@ -52,6 +55,9 @@
     <section id="progress">
       <div class="container">
         <div class="progress-area">
+          <div class="progress-title">
+            <h1>賽程表</h1>
+          </div>
           <div class="row justify-content-center align-items-center progress-tab-bar">
                <div class="col-sm-2">
                  <button id="defaultOpen" class="btn btn-primary tablinks" onclick="openTab(event, 'signalRacing')">個人競速</button>
@@ -66,7 +72,7 @@
                </div>
           </div>
           <div id="signalRacing" class="progress-tabcontent tabcontent">
-            <h1>個人競速</h1>
+            <h2>個人競速</h2>
             <div class="progress-grouping">
               <iframe src="https://ttes-2019nukl.web.app/sracing_grouping.html"></iframe>
             </div>
@@ -88,7 +94,7 @@
             </div>
           </div>
           <div id="signalItem" class="progress-tabcontent tabcontent">
-            <h1>個人道具</h1>
+            <h2>個人道具</h2>
             <div class="progress-grouping">
               <iframe src="https://ttes-2019nukl.web.app/sitem_grouping.html"></iframe>
             </div>
@@ -110,7 +116,7 @@
             </div>
           </div>
           <div id="groupRacing" class="progress-tabcontent tabcontent">
-            <h1>團體競速</h1>
+            <h2>團體競速</h2>
             <div class="progress-grouping">
               <iframe src="https://ttes-2019nukl.web.app/gracing_grouping.html"></iframe>
             </div>
@@ -191,6 +197,7 @@
     <!--/.footer end-->
     <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
+    <script src="js/firebaseConfig.js"></script>
     <script src="js/tabview.js"></script>
     <script src="js/progress_loader.js"></script>
 </body>

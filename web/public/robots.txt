@@ -7,6 +7,7 @@ Disallow: /reward.html
 Disallow: /contact_us.html
 Disallow: /qualify.html
 Disallow: /progress.html
+Disallow: /reocrd.html
 Disallow: /gracing_grouping.html
 Disallow: /sracing_grouping.html
 Disallow: /sitem_grouping.html

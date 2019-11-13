@@ -1,0 +1,76 @@
+#record{
+  width: 100%;
+  margin: 80px 0px;
+  display: flex;
+  align-items: center;
+  justify-content:  center;
+}
+
+#record .record-area{
+  width: 100%;
+  padding: 40px 80px;
+  background: url(../img/otherpage/dirty_old_shirt.png);
+  background-size: auto;
+  border:  3px solid #960E0E;
+}
+
+#record .record-area .record-tab-bar{
+  text-align: center;
+}
+
+#record .record-area .record-list-item {
+  width: 100%;
+  text-align: center;
+  background-color: #333743;
+  border: 1px solid #195da1;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+#record .record-area .record-title{
+  width 100%;
+  text-align: center;
+}
+
+#record .record-area .record-list-item p{
+  font-size: 18px;
+  margin: 10px 0px;
+}
+
+@media screen and (max-width: 1024px){
+  #record .record-area{
+    padding: 40px 40px;
+  }
+}
+
+@media screen and (max-width: 766px){
+  #record{
+    margin: 20px 0px;
+  }
+
+  #record .record-area{
+    padding: 10px 10px;
+  }
+
+  #record .record-title h1{
+    font-size: 30px;
+  }
+
+  #record .record-tabcontent h2{
+    font-size: 22px;
+  }
+
+  #record .record-area .record-tab-bar .tablinks{
+    font-size: 20px;
+  }
+
+  #record .record-area .record-list-item p{
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 413px){
+  #record .record-area .record-list-item p{
+    font-size: 14px;
+  }
+}

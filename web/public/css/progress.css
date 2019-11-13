@@ -27,6 +27,11 @@
   word-wrap: break-word;
 }
 
+#progress .progress-area .progress-title{
+  width 100%;
+  text-align: center;
+}
+
 #progress .progress-area .progress-list-item p{
   font-size: 18px;
   margin: 10px 0px;
@@ -76,8 +81,12 @@
     height: 400px;
   }
 
-  #progress .progress-tabcontent h1{
-    font-size: 25px;
+  #progress .progress-title h1{
+    font-size: 30px;
+  }
+
+  #progress .progress-tabcontent h2{
+    font-size: 22px;
   }
 
   #progress .progress-area .progress-tab-bar .tablinks{
