@@ -1,3 +1,4 @@
+var db = firebase.firestore()
 var gracing_div=document.getElementById('groupRacing')
 var sracing_div=document.getElementById('signalRacing')
 var sitem_div=document.getElementById('signalItem')

@@ -1,5 +1,5 @@
+from PyQt5 import QtWidgets, QtCore, QtGui
 from PyQt5.QtWidgets import QDialog
-from PyQt5 import QtWidgets, QtCore
 from src.ui.NewMatchDialog import Ui_new_match_dialog
 from src.model.MatchInfo import MatchInfo
 from src.model.EnrollInfo import EnrollInfo
@@ -19,6 +19,8 @@ class NewMatch(QDialog):
         self.ui.cancel_btn.clicked.connect(self.onCancelClick)
         self.ui.add_btn.clicked.connect(self.onAddClick)
         self.ui.remove_btn.clicked.connect(self.onRemoveClick)
+        self.onlyInt = QtGui.QIntValidator()
+        self.ui.group.setValidator(self.onlyInt)
         self.setUpUi()
 
     def setUpUi(self):
@@ -51,8 +53,8 @@ class NewMatch(QDialog):
         return self._group, self._playerList
 
     def onOkClick(self):
-        self._group=self.ui.group.text()
-        if self._group!="":
+        self._group=self.ui.group.text().zfill(2)
+        if self._group!="" and len(self._playerList)!=0:
             self.accept()
 
     def onCancelClick(self):

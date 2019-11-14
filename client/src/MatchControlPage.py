@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QMainWindow,QDialog,QMessageBox
-from PyQt5 import QtWidgets, QtCore
+from PyQt5 import QtWidgets, QtCore, QtGui
 from src.ui.mainwindow import Ui_MainWindow
 from src.model.MatchInfo import MatchInfo
 from src.model.EnrollInfo import EnrollInfo
@@ -42,6 +42,7 @@ class MatchControlPage():
         self.ui.judge_assign_btn.setEnabled(False)
         idList=self.matchInfo.getMatchList(self.ui.catgory_list.currentText(), self.ui.round_list.currentText())
         table=self.ui.match_list
+        colorRef={"已建立":QtGui.QColor(255,51,51),"已約戰":QtGui.QColor(137,137,255),"已完成":QtGui.QColor(100,255,100)}
         for id in idList:
             count=table.rowCount()
             table.insertRow(count)
@@ -51,6 +52,7 @@ class MatchControlPage():
             table.setItem(count, 3, QtWidgets.QTableWidgetItem(self.matchInfo.getJudge(id)))
             table.setItem(count, 4, QtWidgets.QTableWidgetItem(self.matchInfo.getTime(id)))
             table.setItem(count, 5, QtWidgets.QTableWidgetItem(id))
+            table.item(count, 2).setBackground(colorRef[self.matchInfo.getStatusName(id)])
         self.ui.match_list.sortItems(0)
 
     def onCatOrRoundChange(self):

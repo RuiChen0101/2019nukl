@@ -81,11 +81,33 @@
   <widget class="QTimeEdit" name="time">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>90</x>
      <y>220</y>
-     <width>118</width>
-     <height>22</height>
+     <width>131</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微軟正黑體</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="currentSection">
+    <enum>QDateTimeEdit::HourSection</enum>
+   </property>
+   <property name="displayFormat">
+    <string>HH:mm</string>
+   </property>
+   <property name="time">
+    <time>
+     <hour>18</hour>
+     <minute>0</minute>
+     <second>0</second>
+    </time>
    </property>
   </widget>
  </widget>

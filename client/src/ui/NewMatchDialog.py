@@ -2,18 +2,19 @@
 
 # Form implementation generated from reading ui file './src/ui/NewMatchDialog.ui'
 #
-# Created by: PyQt5 UI code generator 5.10.1
+# Created by: PyQt5 UI code generator 5.12.2
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_new_match_dialog(object):
     def setupUi(self, new_match_dialog):
         new_match_dialog.setObjectName("new_match_dialog")
-        new_match_dialog.resize(770, 540)
-        new_match_dialog.setMinimumSize(QtCore.QSize(770, 540))
-        new_match_dialog.setMaximumSize(QtCore.QSize(770, 540))
+        new_match_dialog.resize(780, 540)
+        new_match_dialog.setMinimumSize(QtCore.QSize(780, 540))
+        new_match_dialog.setMaximumSize(QtCore.QSize(780, 540))
         self.total_player_list_label = QtWidgets.QLabel(new_match_dialog)
         self.total_player_list_label.setGeometry(QtCore.QRect(100, 10, 151, 31))
         font = QtGui.QFont()
@@ -23,7 +24,7 @@ class Ui_new_match_dialog(object):
         self.total_player_list_label.setAlignment(QtCore.Qt.AlignCenter)
         self.total_player_list_label.setObjectName("total_player_list_label")
         self.total_player_list = QtWidgets.QTableWidget(new_match_dialog)
-        self.total_player_list.setGeometry(QtCore.QRect(10, 50, 341, 351))
+        self.total_player_list.setGeometry(QtCore.QRect(10, 50, 371, 351))
         self.total_player_list.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.total_player_list.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
         self.total_player_list.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
@@ -38,9 +39,9 @@ class Ui_new_match_dialog(object):
         self.total_player_list.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
         self.total_player_list.setHorizontalHeaderItem(3, item)
-        self.total_player_list.horizontalHeader().setDefaultSectionSize(84)
+        self.total_player_list.horizontalHeader().setDefaultSectionSize(120)
         self.player_list_label = QtWidgets.QLabel(new_match_dialog)
-        self.player_list_label.setGeometry(QtCore.QRect(540, 10, 151, 31))
+        self.player_list_label.setGeometry(QtCore.QRect(570, 10, 151, 31))
         font = QtGui.QFont()
         font.setFamily("微軟正黑體")
         font.setPointSize(18)
@@ -48,7 +49,7 @@ class Ui_new_match_dialog(object):
         self.player_list_label.setAlignment(QtCore.Qt.AlignCenter)
         self.player_list_label.setObjectName("player_list_label")
         self.player_list = QtWidgets.QTableWidget(new_match_dialog)
-        self.player_list.setGeometry(QtCore.QRect(480, 50, 261, 351))
+        self.player_list.setGeometry(QtCore.QRect(510, 50, 261, 351))
         self.player_list.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.player_list.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
         self.player_list.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
@@ -63,15 +64,15 @@ class Ui_new_match_dialog(object):
         self.player_list.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
         self.player_list.setHorizontalHeaderItem(3, item)
-        self.player_list.horizontalHeader().setDefaultSectionSize(84)
+        self.player_list.horizontalHeader().setDefaultSectionSize(120)
         self.add_btn = QtWidgets.QPushButton(new_match_dialog)
-        self.add_btn.setGeometry(QtCore.QRect(370, 150, 91, 41))
+        self.add_btn.setGeometry(QtCore.QRect(400, 150, 91, 41))
         font = QtGui.QFont()
         font.setFamily("微軟正黑體")
         self.add_btn.setFont(font)
         self.add_btn.setObjectName("add_btn")
         self.remove_btn = QtWidgets.QPushButton(new_match_dialog)
-        self.remove_btn.setGeometry(QtCore.QRect(370, 210, 91, 41))
+        self.remove_btn.setGeometry(QtCore.QRect(400, 210, 91, 41))
         font = QtGui.QFont()
         font.setFamily("微軟正黑體")
         self.remove_btn.setFont(font)
@@ -124,13 +125,13 @@ class Ui_new_match_dialog(object):
         self.group.setFont(font)
         self.group.setObjectName("group")
         self.ok_btn = QtWidgets.QPushButton(new_match_dialog)
-        self.ok_btn.setGeometry(QtCore.QRect(650, 470, 91, 41))
+        self.ok_btn.setGeometry(QtCore.QRect(650, 460, 101, 41))
         font = QtGui.QFont()
         font.setFamily("微軟正黑體")
         self.ok_btn.setFont(font)
         self.ok_btn.setObjectName("ok_btn")
         self.cancel_btn = QtWidgets.QPushButton(new_match_dialog)
-        self.cancel_btn.setGeometry(QtCore.QRect(550, 470, 91, 41))
+        self.cancel_btn.setGeometry(QtCore.QRect(520, 460, 101, 41))
         font = QtGui.QFont()
         font.setFamily("微軟正黑體")
         self.cancel_btn.setFont(font)
@@ -169,4 +170,5 @@ class Ui_new_match_dialog(object):
         self.group_label.setText(_translate("new_match_dialog", "組別:"))
         self.ok_btn.setText(_translate("new_match_dialog", "確認"))
         self.cancel_btn.setText(_translate("new_match_dialog", "取消"))
+
 

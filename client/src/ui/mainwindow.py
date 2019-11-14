@@ -2,11 +2,12 @@
 
 # Form implementation generated from reading ui file './src/ui/mainui.ui'
 #
-# Created by: PyQt5 UI code generator 5.10.1
+# Created by: PyQt5 UI code generator 5.12.2
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -17,7 +18,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.function_tab = QtWidgets.QTabWidget(self.centralwidget)
-        self.function_tab.setGeometry(QtCore.QRect(0, 10, 1001, 831))
+        self.function_tab.setGeometry(QtCore.QRect(0, 20, 1001, 831))
         self.function_tab.setStyleSheet("background-color:#f0f0f0;")
         self.function_tab.setObjectName("function_tab")
         self.enroll_check_tab = QtWidgets.QWidget()
@@ -147,7 +148,7 @@ class Ui_MainWindow(object):
         self.catgory_list.addItem("")
         self.catgory_list.addItem("")
         self.match_list_lable = QtWidgets.QLabel(self.match_tab)
-        self.match_list_lable.setGeometry(QtCore.QRect(200, 60, 151, 31))
+        self.match_list_lable.setGeometry(QtCore.QRect(270, 60, 151, 31))
         font = QtGui.QFont()
         font.setFamily("微軟正黑體")
         font.setPointSize(18)
@@ -155,7 +156,7 @@ class Ui_MainWindow(object):
         self.match_list_lable.setAlignment(QtCore.Qt.AlignCenter)
         self.match_list_lable.setObjectName("match_list_lable")
         self.match_list = QtWidgets.QTableWidget(self.match_tab)
-        self.match_list.setGeometry(QtCore.QRect(50, 100, 431, 241))
+        self.match_list.setGeometry(QtCore.QRect(40, 100, 611, 241))
         self.match_list.setStyleSheet("background-color:#ffffff;")
         self.match_list.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.match_list.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
@@ -175,7 +176,7 @@ class Ui_MainWindow(object):
         self.match_list.setHorizontalHeaderItem(4, item)
         item = QtWidgets.QTableWidgetItem()
         self.match_list.setHorizontalHeaderItem(5, item)
-        self.match_list.horizontalHeader().setDefaultSectionSize(84)
+        self.match_list.horizontalHeader().setDefaultSectionSize(110)
         self.round_list = QtWidgets.QComboBox(self.match_tab)
         self.round_list.setGeometry(QtCore.QRect(30, 50, 101, 22))
         self.round_list.setMaxCount(7)
@@ -188,7 +189,7 @@ class Ui_MainWindow(object):
         self.round_list.addItem("")
         self.round_list.addItem("")
         self.player_list = QtWidgets.QTableWidget(self.match_tab)
-        self.player_list.setGeometry(QtCore.QRect(540, 100, 181, 241))
+        self.player_list.setGeometry(QtCore.QRect(700, 100, 251, 241))
         self.player_list.setStyleSheet("background-color:#ffffff;")
         self.player_list.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.player_list.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
@@ -200,9 +201,9 @@ class Ui_MainWindow(object):
         self.player_list.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
         self.player_list.setHorizontalHeaderItem(1, item)
-        self.player_list.horizontalHeader().setDefaultSectionSize(84)
+        self.player_list.horizontalHeader().setDefaultSectionSize(120)
         self.player_list_label = QtWidgets.QLabel(self.match_tab)
-        self.player_list_label.setGeometry(QtCore.QRect(540, 60, 201, 31))
+        self.player_list_label.setGeometry(QtCore.QRect(730, 60, 201, 31))
         font = QtGui.QFont()
         font.setFamily("微軟正黑體")
         font.setPointSize(18)
@@ -210,19 +211,19 @@ class Ui_MainWindow(object):
         self.player_list_label.setAlignment(QtCore.Qt.AlignCenter)
         self.player_list_label.setObjectName("player_list_label")
         self.delete_match_btn = QtWidgets.QPushButton(self.match_tab)
-        self.delete_match_btn.setGeometry(QtCore.QRect(320, 350, 111, 41))
+        self.delete_match_btn.setGeometry(QtCore.QRect(420, 350, 111, 41))
         font = QtGui.QFont()
         font.setFamily("微軟正黑體")
         self.delete_match_btn.setFont(font)
         self.delete_match_btn.setObjectName("delete_match_btn")
         self.new_match_btn = QtWidgets.QPushButton(self.match_tab)
-        self.new_match_btn.setGeometry(QtCore.QRect(110, 350, 111, 41))
+        self.new_match_btn.setGeometry(QtCore.QRect(160, 350, 111, 41))
         font = QtGui.QFont()
         font.setFamily("微軟正黑體")
         self.new_match_btn.setFont(font)
         self.new_match_btn.setObjectName("new_match_btn")
         self.advance_player_list = QtWidgets.QTableWidget(self.match_tab)
-        self.advance_player_list.setGeometry(QtCore.QRect(780, 100, 181, 241))
+        self.advance_player_list.setGeometry(QtCore.QRect(700, 500, 251, 241))
         self.advance_player_list.setStyleSheet("background-color:#ffffff;")
         self.advance_player_list.setEditTriggers(QtWidgets.QAbstractItemView.DoubleClicked)
         self.advance_player_list.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
@@ -234,9 +235,9 @@ class Ui_MainWindow(object):
         self.advance_player_list.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
         self.advance_player_list.setHorizontalHeaderItem(1, item)
-        self.advance_player_list.horizontalHeader().setDefaultSectionSize(84)
+        self.advance_player_list.horizontalHeader().setDefaultSectionSize(120)
         self.advance_player_list_label = QtWidgets.QLabel(self.match_tab)
-        self.advance_player_list_label.setGeometry(QtCore.QRect(780, 60, 191, 31))
+        self.advance_player_list_label.setGeometry(QtCore.QRect(730, 460, 191, 31))
         font = QtGui.QFont()
         font.setFamily("微軟正黑體")
         font.setPointSize(18)
@@ -448,4 +449,5 @@ class Ui_MainWindow(object):
         self.set_replay_btn.setText(_translate("MainWindow", "儲存直播紀錄"))
         self.judge_assign_btn.setText(_translate("MainWindow", "裁判指派"))
         self.function_tab.setTabText(self.function_tab.indexOf(self.match_tab), _translate("MainWindow", "場次用"))
+
 

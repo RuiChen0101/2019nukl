@@ -30,7 +30,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>10</y>
+      <y>20</y>
       <width>1001</width>
       <height>831</height>
      </rect>
@@ -390,7 +390,7 @@
      <widget class="QLabel" name="match_list_lable">
       <property name="geometry">
        <rect>
-        <x>200</x>
+        <x>270</x>
         <y>60</y>
         <width>151</width>
         <height>31</height>
@@ -412,9 +412,9 @@
      <widget class="QTableWidget" name="match_list">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>40</x>
         <y>100</y>
-        <width>431</width>
+        <width>611</width>
         <height>241</height>
        </rect>
       </property>
@@ -431,7 +431,7 @@
        <enum>QAbstractItemView::SelectRows</enum>
       </property>
       <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>84</number>
+       <number>110</number>
       </attribute>
       <column>
        <property name="text">
@@ -518,9 +518,9 @@
      <widget class="QTableWidget" name="player_list">
       <property name="geometry">
        <rect>
-        <x>540</x>
+        <x>700</x>
         <y>100</y>
-        <width>181</width>
+        <width>251</width>
         <height>241</height>
        </rect>
       </property>
@@ -537,7 +537,7 @@
        <enum>QAbstractItemView::SelectRows</enum>
       </property>
       <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>84</number>
+       <number>120</number>
       </attribute>
       <column>
        <property name="text">
@@ -553,7 +553,7 @@
      <widget class="QLabel" name="player_list_label">
       <property name="geometry">
        <rect>
-        <x>540</x>
+        <x>730</x>
         <y>60</y>
         <width>201</width>
         <height>31</height>
@@ -575,7 +575,7 @@
      <widget class="QPushButton" name="delete_match_btn">
       <property name="geometry">
        <rect>
-        <x>320</x>
+        <x>420</x>
         <y>350</y>
         <width>111</width>
         <height>41</height>
@@ -593,7 +593,7 @@
      <widget class="QPushButton" name="new_match_btn">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>160</x>
         <y>350</y>
         <width>111</width>
         <height>41</height>
@@ -611,9 +611,9 @@
      <widget class="QTableWidget" name="advance_player_list">
       <property name="geometry">
        <rect>
-        <x>780</x>
-        <y>100</y>
-        <width>181</width>
+        <x>700</x>
+        <y>500</y>
+        <width>251</width>
         <height>241</height>
        </rect>
       </property>
@@ -630,7 +630,7 @@
        <enum>QAbstractItemView::SelectRows</enum>
       </property>
       <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>84</number>
+       <number>120</number>
       </attribute>
       <column>
        <property name="text">
@@ -646,8 +646,8 @@
      <widget class="QLabel" name="advance_player_list_label">
       <property name="geometry">
        <rect>
-        <x>780</x>
-        <y>60</y>
+        <x>730</x>
+        <y>460</y>
         <width>191</width>
         <height>31</height>
        </rect>
