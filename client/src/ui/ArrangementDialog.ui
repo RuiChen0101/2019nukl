@@ -74,8 +74,20 @@
     <date>
      <year>2019</year>
      <month>11</month>
-     <day>11</day>
+     <day>25</day>
     </date>
+   </property>
+   <property name="gridVisible">
+    <bool>false</bool>
+   </property>
+   <property name="horizontalHeaderFormat">
+    <enum>QCalendarWidget::SingleLetterDayNames</enum>
+   </property>
+   <property name="verticalHeaderFormat">
+    <enum>QCalendarWidget::NoVerticalHeader</enum>
+   </property>
+   <property name="navigationBarVisible">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QTimeEdit" name="time">

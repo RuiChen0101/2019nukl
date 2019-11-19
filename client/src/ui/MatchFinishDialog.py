@@ -96,8 +96,9 @@ class Ui_match_finish_dialog(object):
         font.setFamily("微軟正黑體")
         font.setPointSize(12)
         self.next_round.setFont(font)
-        self.next_round.setMaxCount(5)
+        self.next_round.setMaxCount(6)
         self.next_round.setObjectName("next_round")
+        self.next_round.addItem("")
         self.next_round.addItem("")
         self.next_round.addItem("")
         self.next_round.addItem("")
@@ -133,5 +134,6 @@ class Ui_match_finish_dialog(object):
         self.next_round.setItemText(2, _translate("match_finish_dialog", "16強"))
         self.next_round.setItemText(3, _translate("match_finish_dialog", "8強"))
         self.next_round.setItemText(4, _translate("match_finish_dialog", "4強"))
+        self.next_round.setItemText(5, _translate("match_finish_dialog", "決賽"))
 
 

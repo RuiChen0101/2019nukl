@@ -486,11 +486,6 @@
       </item>
       <item>
        <property name="text">
-        <string>128強</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
         <string>64強</string>
        </property>
       </item>
@@ -955,6 +950,289 @@
       </property>
       <property name="text">
        <string>裁判指派</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="calender_tab">
+     <attribute name="title">
+      <string>時間表</string>
+     </attribute>
+     <widget class="QCalendarWidget" name="calender">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>400</y>
+        <width>971</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="selectedDate">
+       <date>
+        <year>2019</year>
+        <month>11</month>
+        <day>18</day>
+       </date>
+      </property>
+      <property name="gridVisible">
+       <bool>true</bool>
+      </property>
+      <property name="verticalHeaderFormat">
+       <enum>QCalendarWidget::NoVerticalHeader</enum>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="match_view_list">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>70</y>
+        <width>661</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:#ffffff;</string>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>110</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>組別</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>項目</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>狀態</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>裁判</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>約戰日期</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>docID</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QLabel" name="match_view_list_lable">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>30</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>比賽清單</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="player_view_list">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>70</y>
+        <width>251</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:#ffffff;</string>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>120</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>比賽分數</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QLabel" name="player_view_list_label">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>30</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>比賽選手名單</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="judge_assign_view_btn">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>330</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>裁判指派</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="track_record_tab">
+     <attribute name="title">
+      <string>賽道紀錄</string>
+     </attribute>
+     <widget class="QComboBox" name="catgory_track_list">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>101</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="maxCount">
+       <number>3</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>個人競速</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>個人道具</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>團體競速</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QTableWidget" name="track_record_list">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>751</width>
+        <height>661</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:#ffffff;</string>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::DoubleClicked</set>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>240</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>賽道</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>紀錄保持人</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>紀錄</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="track_record_update">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>730</y>
+        <width>191</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>更新</string>
       </property>
      </widget>
     </widget>

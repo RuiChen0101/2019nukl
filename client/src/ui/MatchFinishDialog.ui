@@ -248,7 +248,7 @@
     <number>0</number>
    </property>
    <property name="maxCount">
-    <number>5</number>
+    <number>6</number>
    </property>
    <item>
     <property name="text">
@@ -273,6 +273,11 @@
    <item>
     <property name="text">
      <string>4強</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>決賽</string>
     </property>
    </item>
   </widget>

@@ -1,4 +1,3 @@
-import pytz
 from datetime import datetime
 from google.api_core.datetime_helpers import DatetimeWithNanoseconds
 from src.model.firedb import firedb
@@ -14,6 +13,14 @@ class MatchInfo():
         result=[]
         for id in self._idList:
             if self.getRound(id)==round and self.getCatogoryName(id)==cat:
+                result.append(id)
+        return result
+
+    def getMatchByDateList(self, date):
+        result=[]
+        date=date.strftime("%m/%d")
+        for id in self._idList:
+            if date in self.getTime(id):
                 result.append(id)
         return result
 

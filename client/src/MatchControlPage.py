@@ -1,5 +1,5 @@
-from PyQt5.QtWidgets import QMainWindow,QDialog,QMessageBox
-from PyQt5 import QtWidgets, QtCore, QtGui
+from PyQt5.QtWidgets import QDialog, QMessageBox
+from PyQt5 import QtWidgets, QtGui
 from src.ui.mainwindow import Ui_MainWindow
 from src.model.MatchInfo import MatchInfo
 from src.model.EnrollInfo import EnrollInfo
@@ -53,7 +53,7 @@ class MatchControlPage():
             table.setItem(count, 4, QtWidgets.QTableWidgetItem(self.matchInfo.getTime(id)))
             table.setItem(count, 5, QtWidgets.QTableWidgetItem(id))
             table.item(count, 2).setBackground(colorRef[self.matchInfo.getStatusName(id)])
-        self.ui.match_list.sortItems(0)
+        table.sortItems(0)
 
     def onCatOrRoundChange(self):
         self.ui.match_list.clearSelection()
