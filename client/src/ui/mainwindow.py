@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file './src/ui/mainui.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.2
+# Created by: PyQt5 UI code generator 5.10.1
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -181,6 +180,7 @@ class Ui_MainWindow(object):
         self.round_list.setGeometry(QtCore.QRect(30, 50, 101, 22))
         self.round_list.setMaxCount(7)
         self.round_list.setObjectName("round_list")
+        self.round_list.addItem("")
         self.round_list.addItem("")
         self.round_list.addItem("")
         self.round_list.addItem("")
@@ -523,8 +523,9 @@ class Ui_MainWindow(object):
         self.round_list.setItemText(1, _translate("MainWindow", "64強"))
         self.round_list.setItemText(2, _translate("MainWindow", "32強"))
         self.round_list.setItemText(3, _translate("MainWindow", "16強"))
-        self.round_list.setItemText(4, _translate("MainWindow", "8強"))
-        self.round_list.setItemText(5, _translate("MainWindow", "4強"))
+        self.round_list.setItemText(4, _translate("MainWindow", "08強"))
+        self.round_list.setItemText(5, _translate("MainWindow", "04強"))
+        self.round_list.setItemText(6, _translate("MainWindow", "決賽"))
         item = self.player_list.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "ID"))
         item = self.player_list.horizontalHeaderItem(1)
@@ -583,5 +584,4 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "紀錄"))
         self.track_record_update.setText(_translate("MainWindow", "更新"))
         self.function_tab.setTabText(self.function_tab.indexOf(self.track_record_tab), _translate("MainWindow", "賽道紀錄"))
-
 

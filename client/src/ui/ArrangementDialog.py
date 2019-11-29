@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file './src/ui/ArrangementDialog.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.2
+# Created by: PyQt5 UI code generator 5.10.1
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 
 class Ui_arrangement_dialog(object):
     def setupUi(self, arrangement_dialog):
@@ -55,5 +54,4 @@ class Ui_arrangement_dialog(object):
         self.cancel_btn.setText(_translate("arrangement_dialog", "取消"))
         self.ok_btn.setText(_translate("arrangement_dialog", "確認"))
         self.time.setDisplayFormat(_translate("arrangement_dialog", "HH:mm"))
-
 
