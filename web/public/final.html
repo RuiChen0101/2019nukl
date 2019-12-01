@@ -11,8 +11,7 @@
     <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href='css/general.css'>
-    <link rel="stylesheet" href='css/progress.css'>
-    <link rel="stylesheet" href='css/all.css'>
+    <link rel="stylesheet" href='css/final.css'>
 </head>
 
 <body class="bg-0e">
@@ -31,17 +30,17 @@
                 <li class="nav-item">
                     <a class="nav-link" href="enroll_list.html">選手名單</a>
                 </li>
-                <li class="nav-item  active">
-                    <a class="nav-link" href="#">賽程表</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="progress.html">賽程表</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="record.html">賽道紀錄</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item  active">
                     <a class="nav-link" href="reward.html">賽事獎項</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="final.html">決賽資訊</a>
+                    <a class="nav-link" href="#">決賽資訊</a>
                 </li>
                 <li class="nav-item">
                      <a class="nav-link" href="contact_us.html">聯絡我們</a>
@@ -52,90 +51,110 @@
     <!--/.header end-->
 
 
-    <section id="progress">
+    <section id="final">
       <div class="container">
-        <div class="progress-area">
-          <div class="progress-title">
-            <h1>賽程表</h1>
-          </div>
-          <div class="row justify-content-center align-items-center progress-tab-bar">
-               <div class="col-sm-2">
-                 <button id="defaultOpen" class="btn btn-primary tablinks" onclick="openTab(event, 'signalRacing')">個人競速</button>
-               </div>
-              <p class="sm-hidden">|</p>
-               <div class="col-sm-2">
-                 <button class="btn btn-primary tablinks" onclick="openTab(event, 'signalItem')">個人道具</button>
-               </div>
-              <p class="sm-hidden">|</p>
-               <div class="col-sm-2">
-                 <button class="btn btn-primary tablinks" onclick="openTab(event, 'groupRacing')">團體競速</button>
-               </div>
-          </div>
-          <div id="signalRacing" class="progress-tabcontent tabcontent">
-            <h2>個人競速</h2>
-            <div class="progress-grouping">
-              <iframe src="https://ttes-2019nukl.web.app/sracing_grouping.html"></iframe>
+        <div class="final-area">
+          <div class="final-title">
+            <div class="col">
+              <img src="img/icon/white_logo.png">
             </div>
-            <div class="progress-list-item">
-              <div class="row">
-                <div class="col">
-                  <p>比賽編號</p>
+            <h1>2019北區大專跑跑卡丁車聯賽</h1>
+            <h2>12月14日 10:00-20:00</h2>
+            <h2>國立臺北科技大學 中正館 中正廳</h2>
+            <h2>跑跑卡丁車總決賽 熱血開打</h2>
+          </div>
+          <div class="final-caster">
+            <h2>豪華主持陣容，嗨翻中正館</h2>
+            <div class="row">
+              <div class="col-sm">
+                <div class="caster">
+                  <h4>爆哥</h4>
+                  <img src="img/caster/neal.JPG">
+                  <p>團體競速冠亞賽</p>
                 </div>
-                <div class="col sm-hidden">
-                  <p>比賽時間</p>
+              </div>
+              <div class="col-sm">
+                <div class="caster">
+                  <h4>朔月</h4>
+                  <img src="img/caster/moon.jpeg">
+                  <p>個人競速決賽</p>
+                  <p>個人道具決賽</p>
                 </div>
-                <div class="col-5">
-                  <p>晉級選手</p>
+              </div>
+              <div class="col-sm">
+                <div class="caster">
+                  <h4>影哥</h4>
+                  <img src="img/caster/night.jpg">
+                  <p>團體競速冠亞賽</p>
                 </div>
-                <div class="col">
-                  <p>比賽紀錄</p>
+              </div>
+              <div class="col-sm">
+                <div class="caster">
+                  <h4>SpaceQ</h4>
+                  <img src="img/caster/spaceq.jpg">
+                  <p>團體競速季殿賽</p>
+                  <p>個人道具決賽</p>
                 </div>
               </div>
             </div>
           </div>
-          <div id="signalItem" class="progress-tabcontent tabcontent">
-            <h2>個人道具</h2>
-            <div class="progress-grouping">
-              <iframe src="https://ttes-2019nukl.web.app/sitem_grouping.html"></iframe>
-            </div>
-            <div class="progress-list-item">
-              <div class="row">
-                <div class="col">
-                  <p>比賽編號</p>
-                </div>
-                <div class="col sm-hidden">
-                  <p>比賽時間</p>
-                </div>
-                <div class="col-5">
-                  <p>晉級選手</p>
-                </div>
-                <div class="col">
-                  <p>比賽紀錄</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="groupRacing" class="progress-tabcontent tabcontent">
-            <h2>團體競速</h2>
-            <div class="progress-grouping">
-              <iframe src="https://ttes-2019nukl.web.app/gracing_grouping.html"></iframe>
-            </div>
-            <div class="progress-list-item">
-              <div class="row">
-                <div class="col">
-                  <p>比賽編號</p>
-                </div>
-                <div class="col sm-hidden">
-                  <p>比賽時間</p>
-                </div>
-                <div class="col-5">
-                  <p>比賽結果</p>
-                </div>
-                <div class="col">
-                  <p>比賽紀錄</p>
-                </div>
-              </div>
-            </div>
+          <!-- <div class="final-reward">
+            <h2>諸多好禮獎不完</h2>
+          </div> -->
+          <div class="final-timetable">
+            <h2>活動流程</h2>
+            <table class="timetable">
+              <tbody>
+                <tr>
+                  <td><p>時間</p></td>
+                  <td><p>流程內容</p></td>
+                </tr>
+                <tr>
+                  <td><p>10:00-10:20</p></td>
+                  <td><p>開放入場</p></td>
+                </tr>
+                <tr>
+                  <td><p>10:20-10:30</p></td>
+                  <td><p>活動開場</p></td>
+                </tr>
+                <tr>
+                  <td><p>10:30~12:30</p></td>
+                  <td><p>團體競速季殿賽</p></td>
+                </tr>
+                <tr>
+                  <td><p>12:30~13:00</p></td>
+                  <td><p>中場休息</p></td>
+                </tr>
+                <tr>
+                  <td><p>13:00~14:30</p></td>
+                  <td><p>個人競速決賽</p></td>
+                </tr>
+                <tr>
+                  <td><p>14:30~15:20</p></td>
+                  <td><p>Tt曜越水冷Q&A</p></td>
+                </tr>
+                <tr>
+                  <td><p>15:20~16:50</p></td>
+                  <td><p>個人道具決賽</p></td>
+                </tr>
+                <tr>
+                  <td><p>16:50~17:30</p></td>
+                  <td><p>觀眾同樂場</p></td>
+                </tr>
+                <tr>
+                  <td><p>17:30~18:00</p></td>
+                  <td><p>中場休息</p></td>
+                </tr>
+                <tr>
+                  <td><p>18:00~20:00</p></td>
+                  <td><p>團體競速冠亞賽</p></td>
+                </tr>
+                <tr>
+                  <td><p>20:00~20:30</p></td>
+                  <td><p>頒獎</p></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -199,21 +218,6 @@
             </div>
         </div>
     </footer>
-    <template id="match-info-template">
-      <div class="progress-list-item">
-        <div class="row">
-          <div id="round" class="col"></div>
-          <div id="time" class="col sm-hidden"></div>
-          <div id="result" class="col-5"></div>
-          <div id="replay" class="col"></div>
-        </div>
-      </div>
-    </template>
     <!--/.footer end-->
-    <script src="/__/firebase/7.3.0/firebase-app.js"></script>
-    <script src="/__/firebase/7.3.0/firebase-firestore.js"></script>
-    <script src="/__/firebase/init.js"></script>
-    <script src="js/tabview.js"></script>
-    <script src="js/progress_loader.js"></script>
 </body>
 </HTML>

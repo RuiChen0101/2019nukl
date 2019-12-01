@@ -1,0 +1,95 @@
+#final{
+  width: 100%;
+  margin: 80px 0px;
+  display: flex;
+  align-items: center;
+  justify-content:  center;
+}
+
+#final .final-area{
+  width: 100%;
+  padding: 0px 80px;
+  background: url(../img/otherpage/dirty_old_shirt.png);
+  background-size: auto;
+  border:  3px solid #960E0E;
+}
+
+#final .final-area .final-title{
+  text-align: center;
+}
+
+#final .final-area .final-title img{
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+#final .final-area .final-caster{
+  margin: 50px 0px;
+}
+
+#final .final-area .final-caster .caster{
+  width: 100%;
+  margin: 20px 0px;
+  text-align: center;
+}
+
+#final .final-area .final-caster .caster img{
+  width: 100%;
+  height: auto;
+}
+
+#final .final-area .final-caster .caster p{
+  margin: 3px 0px;
+}
+
+#final .final-area .final-timetable{
+  width: 100%;
+  margin: 50px 0px;
+}
+
+#final .final-area .final-timetable .timetable{
+  background-color: #333743;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+#final .final-area .final-timetable .timetable td{
+  padding: 5px 20px;
+}
+
+#final .final-area .final-timetable .timetable tr:nth-of-type(even){
+  background-color: #424757;
+}
+
+#final .final-area .final-timetable p{
+  margin: 10px 0px;
+}
+
+@media screen and (max-width: 1024px){
+  #final .final-area{
+    padding: 0px 40px;
+  }
+}
+
+@media screen and (max-width: 766px){
+  #final{
+    margin: 20px 0px;
+  }
+
+  #final .final-area{
+    padding: 0px 10px;
+  }
+
+  #final .final-area .final-title h1{
+    font-size: 22px;
+  }
+
+  #final .final-area .final-title h2{
+    font-size: 18px;
+  }
+
+  #final .final-area .final-caster h2{
+    font-size: 24px;
+  }
+}
