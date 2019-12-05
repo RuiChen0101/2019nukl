@@ -43,6 +43,16 @@
   margin: 3px 0px;
 }
 
+#final .final-area .final-event .final_event_img{
+  text-align: center;
+}
+
+#final .final-area .final-event .final_event_img img{
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
 #final .final-area .final-timetable{
   width: 100%;
   margin: 50px 0px;
